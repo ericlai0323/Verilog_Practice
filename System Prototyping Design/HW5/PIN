@@ -1,0 +1,6 @@
+NET "light[2]" LOC = K16;
+NET "light[1]" LOC = H14;
+NET "light[0]" LOC = J14;
+NET "rst" LOC = K5;
+NET "start" LOC = E6;
+NET "clk" LOC = P9;
