@@ -1,0 +1,90 @@
+Magic 271485
+Revision Verdi_O-2018.09
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 0 23 1920 1017 211 100
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/home/SIP/M11112091/SIP/spu/sim/rtl_sim/run/spu_tb.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 20
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 0.000000 33330.000000
+cursor 26600.000000
+marker 0.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+; visible top row signal index
+top 0
+; marker line index
+markerPos 18
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+addGroup "G1"
+activeDirFile "" "/home/SIP/M11112091/SIP/spu/sim/rtl_sim/run/spu_tb.fsdb"
+addSignal -c ID_WHITE -ls solid -lw 5 -h 25 /spu_tb/spu_inst/c1/pc[7:0]
+addSignal -c ID_WHITE -ls solid -lw 5 -h 25 -UNSIGNED -BIN -holdScope op[3:0]
+addSignal -c ID_PURPLE5 -ls solid -lw 5 -h 25 /spu_tb/spu_inst/d1/mux_out[15:0]
+addSignal -c ID_WHITE -ls solid -lw 5 -h 25 -UNSIGNED -UDEC /spu_tb/spu_inst/c1/ra[3:0]
+addSignal -c ID_WHITE -ls solid -lw 5 -h 25 -UNSIGNED -UDEC -holdScope rb[3:0]
+addSignal -c ID_WHITE -ls solid -lw 5 -h 25 -UNSIGNED -UDEC -holdScope rc[3:0]
+addSignal -c ID_WHITE -ls solid -lw 5 -h 25 /spu_tb/spu_inst/d1/alu_s[1:0]
+addSignal -c ID_PURPLE5 -ls solid -lw 5 -h 25 -UNSIGNED -HEX -holdScope alu_out[15:0]
+addSignal -c ID_WHITE -ls solid -lw 5 -h 25 -holdScope rf_rp_zero
+addSignal -c ID_CYAN5 -ls solid -lw 5 -h 25 -holdScope rf_rp_data[15:0]
+addSignal -c ID_CYAN5 -ls solid -lw 5 -h 25 -holdScope rf_rq_data[15:0]
+addSignal -c ID_WHITE -ls solid -lw 5 -h 25 /spu_tb/spu_inst/d1/rf/r1_addr[3:0]
+addSignal -c ID_GREEN5 -ls solid -lw 5 -h 25 -holdScope r1_data[15:0]
+addSignal -c ID_WHITE -ls solid -lw 5 -h 25 -holdScope r2_addr[3:0]
+addSignal -c ID_GREEN5 -ls solid -lw 5 -h 25 -holdScope r2_data[15:0]
+addSignal -c ID_ORANGE5 -ls solid -lw 5 -h 25 -holdScope w_addr[3:0]
+addSignal -c ID_ORANGE5 -ls solid -lw 5 -h 25 -holdScope w_data[15:0]
+addGroup "G2"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+activeDirFile "" "/home/SIP/M11112091/SIP/spu/sim/rtl_sim/run/spu_tb.fsdb"
+
+GETSIGNALFORM_SCOPE_HIERARCHY_BEGIN
+getSignalForm close
+
+"/spu_tb"
+"/spu_tb/spu_inst"
+"/spu_tb/spu_inst/d1"
+
+SCOPE_LIST_BEGIN
+"/spu_tb"
+"/spu_tb/spu_inst"
+"/spu_tb/spu_inst/c1"
+"/spu_tb/spu_inst/d1"
+"/spu_tb/spu_inst/d1/rf"
+SCOPE_LIST_END
+
+GETSIGNALFORM_SCOPE_HIERARCHY_END
+
+

@@ -1,0 +1,81 @@
+Magic 271485
+Revision Verdi_O-2018.09
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 8 31 1920 1057 186 124
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/home/SIP/M11112091/SIP/spu/sim/gate_sim/run/spu_syn_tb.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 30
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 0.000000 339966.000000
+cursor 0.000000
+marker 0.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+; visible top row signal index
+top 0
+; marker line index
+markerPos 13
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+addGroup "G1"
+activeDirFile "" "/home/SIP/M11112091/SIP/spu/sim/gate_sim/run/spu_syn_tb.fsdb"
+addSignal -c ID_ORANGE5 -ls solid -lw 3 -h 30 /spu_syn_tb/clk
+addSignal -c ID_ORANGE5 -ls solid -lw 3 -h 30 -holdScope dm_addr[7:0]
+addSignal -c ID_ORANGE5 -ls solid -lw 3 -h 30 -holdScope dm_r_data[15:0]
+addSignal -c ID_ORANGE5 -ls solid -lw 3 -h 30 -holdScope dm_rd
+addSignal -c ID_ORANGE5 -ls solid -lw 3 -h 30 -holdScope dm_w_data[15:0]
+addSignal -c ID_ORANGE5 -ls solid -lw 3 -h 30 -holdScope dm_wr
+addSignal -c ID_ORANGE5 -ls solid -lw 3 -h 30 -holdScope err[31:0]
+addSignal -c ID_ORANGE5 -ls solid -lw 3 -h 30 -holdScope im_addr[7:0]
+addSignal -c ID_ORANGE5 -ls solid -lw 3 -h 30 -holdScope im_r_data[15:0]
+addSignal -c ID_ORANGE5 -ls solid -lw 3 -h 30 -holdScope im_rd
+addSignal -c ID_ORANGE5 -ls solid -lw 3 -h 30 -holdScope rst
+addSignal -c ID_ORANGE5 -ls solid -lw 3 -h 30 -holdScope start
+addSignal -c ID_ORANGE5 -ls solid -lw 3 -h 30 -holdScope stop
+addGroup "G2"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+activeDirFile "" "/home/SIP/M11112091/SIP/spu/sim/gate_sim/run/spu_syn_tb.fsdb"
+
+GETSIGNALFORM_SCOPE_HIERARCHY_BEGIN
+getSignalForm close
+
+"/spu_syn_tb"
+"/spu_syn_tb/spu_inst"
+
+SCOPE_LIST_BEGIN
+"/spu_syn_tb"
+SCOPE_LIST_END
+
+GETSIGNALFORM_SCOPE_HIERARCHY_END
+
+
