@@ -1,6 +1,6 @@
 module temp_reg(
     input clk,
-    input rst,
+    input rst_n,
     input [3:0]sw_a,
     input [3:0]sw_b,
     input [7:0]alu_result,
@@ -11,7 +11,7 @@ module temp_reg(
 
     always @(posedge clk)
     begin
-        if(!rst)
+        if(rst_n)
         begin
             reg_a <= sw_a;
             reg_b <= sw_b;

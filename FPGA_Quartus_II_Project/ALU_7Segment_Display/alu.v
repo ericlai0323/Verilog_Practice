@@ -1,7 +1,7 @@
 module alu(
     input clk,
-    input rst,
-    input flag,
+    input rst_n,
+    input flag_n,
     input [3:0] a, 
     input [3:0] b, 
     input [1:0] mode,
@@ -24,7 +24,7 @@ module alu(
         temp_a <= a;
         temp_b <= b;    
         
-        if (!flag)
+        if (flag_n)
         begin
             result <= 8'd0;
         end
