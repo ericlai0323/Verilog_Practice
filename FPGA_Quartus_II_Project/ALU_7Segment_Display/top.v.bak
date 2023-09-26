@@ -1,0 +1,12 @@
+module top(
+		input clk_50MHz,
+		input [3:0]sw_a,
+		input [3:0]sw_b,
+		input [1:0]sw_mode,
+		input flag,
+		input rst,
+		output reg [6:0]segment_a[1:0],
+		output reg [6:0]segment_b[1:0],
+		output reg [6:0]segment_result[3:0]);
+		
+endmodule

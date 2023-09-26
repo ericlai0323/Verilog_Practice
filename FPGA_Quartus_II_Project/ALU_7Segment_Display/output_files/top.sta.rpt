@@ -1,0 +1,1523 @@
+TimeQuest Timing Analyzer report for top
+Mon Sep 25 23:09:25 2023
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'clk_50megahz'
+ 12. Slow Model Hold: 'clk_50megahz'
+ 13. Slow Model Minimum Pulse Width: 'clk_50megahz'
+ 14. Slow Model Minimum Pulse Width: 'clk_generator:clk_generator_0|clk_50hz'
+ 15. Setup Times
+ 16. Hold Times
+ 17. Clock to Output Times
+ 18. Minimum Clock to Output Times
+ 19. Propagation Delay
+ 20. Minimum Propagation Delay
+ 21. Fast Model Setup Summary
+ 22. Fast Model Hold Summary
+ 23. Fast Model Recovery Summary
+ 24. Fast Model Removal Summary
+ 25. Fast Model Minimum Pulse Width Summary
+ 26. Fast Model Setup: 'clk_50megahz'
+ 27. Fast Model Hold: 'clk_50megahz'
+ 28. Fast Model Minimum Pulse Width: 'clk_50megahz'
+ 29. Fast Model Minimum Pulse Width: 'clk_generator:clk_generator_0|clk_50hz'
+ 30. Setup Times
+ 31. Hold Times
+ 32. Clock to Output Times
+ 33. Minimum Clock to Output Times
+ 34. Propagation Delay
+ 35. Minimum Propagation Delay
+ 36. Multicorner Timing Analysis Summary
+ 37. Setup Times
+ 38. Hold Times
+ 39. Clock to Output Times
+ 40. Minimum Clock to Output Times
+ 41. Progagation Delay
+ 42. Minimum Progagation Delay
+ 43. Setup Transfers
+ 44. Hold Transfers
+ 45. Report TCCS
+ 46. Report RSKM
+ 47. Unconstrained Paths
+ 48. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; top                                                               ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-12        ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                                         ;
++----------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------------------------+
+; Clock Name                             ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                                    ;
++----------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------------------------+
+; clk_50megahz                           ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk_50megahz }                           ;
+; clk_generator:clk_generator_0|clk_50hz ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk_generator:clk_generator_0|clk_50hz } ;
++----------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------------------------+
+
+
++----------------------------------------------------+
+; Slow Model Fmax Summary                            ;
++------------+-----------------+--------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name   ; Note ;
++------------+-----------------+--------------+------+
+; 264.06 MHz ; 264.06 MHz      ; clk_50megahz ;      ;
++------------+-----------------+--------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++---------------------------------------+
+; Slow Model Setup Summary              ;
++--------------+--------+---------------+
+; Clock        ; Slack  ; End Point TNS ;
++--------------+--------+---------------+
+; clk_50megahz ; -2.787 ; -81.439       ;
++--------------+--------+---------------+
+
+
++---------------------------------------+
+; Slow Model Hold Summary               ;
++--------------+--------+---------------+
+; Clock        ; Slack  ; End Point TNS ;
++--------------+--------+---------------+
+; clk_50megahz ; -2.524 ; -2.524        ;
++--------------+--------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++-----------------------------------------------------------------+
+; Slow Model Minimum Pulse Width Summary                          ;
++----------------------------------------+--------+---------------+
+; Clock                                  ; Slack  ; End Point TNS ;
++----------------------------------------+--------+---------------+
+; clk_50megahz                           ; -1.380 ; -34.380       ;
+; clk_generator:clk_generator_0|clk_50hz ; -0.500 ; -8.000        ;
++----------------------------------------+--------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk_50megahz'                                                                                                                                                    ;
++--------+--------------------------------------------------+--------------------------------------------------+--------------+--------------+--------------+------------+------------+
+; Slack  ; From Node                                        ; To Node                                          ; Launch Clock ; Latch Clock  ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------------------+--------------------------------------------------+--------------+--------------+--------------+------------+------------+
+; -2.787 ; clk_generator:clk_generator_0|clk_50hz_count[0]  ; clk_generator:clk_generator_0|clk_50hz_count[31] ; clk_50megahz ; clk_50megahz ; 1.000        ; -0.005     ; 3.818      ;
+; -2.726 ; clk_generator:clk_generator_0|clk_50hz_count[1]  ; clk_generator:clk_generator_0|clk_50hz_count[31] ; clk_50megahz ; clk_50megahz ; 1.000        ; -0.005     ; 3.757      ;
+; -2.716 ; clk_generator:clk_generator_0|clk_50hz_count[0]  ; clk_generator:clk_generator_0|clk_50hz_count[30] ; clk_50megahz ; clk_50megahz ; 1.000        ; -0.005     ; 3.747      ;
+; -2.656 ; clk_generator:clk_generator_0|clk_50hz_count[2]  ; clk_generator:clk_generator_0|clk_50hz_count[31] ; clk_50megahz ; clk_50megahz ; 1.000        ; -0.005     ; 3.687      ;
+; -2.655 ; clk_generator:clk_generator_0|clk_50hz_count[1]  ; clk_generator:clk_generator_0|clk_50hz_count[30] ; clk_50megahz ; clk_50megahz ; 1.000        ; -0.005     ; 3.686      ;
+; -2.645 ; clk_generator:clk_generator_0|clk_50hz_count[0]  ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_50megahz ; clk_50megahz ; 1.000        ; -0.005     ; 3.676      ;
+; -2.620 ; clk_generator:clk_generator_0|clk_50hz_count[3]  ; clk_generator:clk_generator_0|clk_50hz_count[31] ; clk_50megahz ; clk_50megahz ; 1.000        ; -0.005     ; 3.651      ;
+; -2.585 ; clk_generator:clk_generator_0|clk_50hz_count[2]  ; clk_generator:clk_generator_0|clk_50hz_count[30] ; clk_50megahz ; clk_50megahz ; 1.000        ; -0.005     ; 3.616      ;
+; -2.584 ; clk_generator:clk_generator_0|clk_50hz_count[1]  ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_50megahz ; clk_50megahz ; 1.000        ; -0.005     ; 3.615      ;
+; -2.574 ; clk_generator:clk_generator_0|clk_50hz_count[0]  ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_50megahz ; clk_50megahz ; 1.000        ; -0.005     ; 3.605      ;
+; -2.549 ; clk_generator:clk_generator_0|clk_50hz_count[3]  ; clk_generator:clk_generator_0|clk_50hz_count[30] ; clk_50megahz ; clk_50megahz ; 1.000        ; -0.005     ; 3.580      ;
+; -2.524 ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_generator:clk_generator_0|clk_50hz_count[0]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.565      ;
+; -2.524 ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_generator:clk_generator_0|clk_50hz_count[1]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.565      ;
+; -2.524 ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_generator:clk_generator_0|clk_50hz_count[2]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.565      ;
+; -2.524 ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_generator:clk_generator_0|clk_50hz_count[3]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.565      ;
+; -2.524 ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_generator:clk_generator_0|clk_50hz_count[4]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.565      ;
+; -2.524 ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_generator:clk_generator_0|clk_50hz_count[5]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.565      ;
+; -2.524 ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_generator:clk_generator_0|clk_50hz_count[6]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.565      ;
+; -2.524 ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_generator:clk_generator_0|clk_50hz_count[7]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.565      ;
+; -2.524 ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_generator:clk_generator_0|clk_50hz_count[8]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.565      ;
+; -2.524 ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.565      ;
+; -2.524 ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_generator:clk_generator_0|clk_50hz_count[10] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.565      ;
+; -2.524 ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_generator:clk_generator_0|clk_50hz_count[11] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.565      ;
+; -2.524 ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_generator:clk_generator_0|clk_50hz_count[12] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.565      ;
+; -2.524 ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_generator:clk_generator_0|clk_50hz_count[13] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.565      ;
+; -2.524 ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_generator:clk_generator_0|clk_50hz_count[14] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.565      ;
+; -2.524 ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_generator:clk_generator_0|clk_50hz_count[15] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.565      ;
+; -2.518 ; clk_generator:clk_generator_0|clk_50hz_count[20] ; clk_generator:clk_generator_0|clk_50hz_count[0]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.559      ;
+; -2.518 ; clk_generator:clk_generator_0|clk_50hz_count[20] ; clk_generator:clk_generator_0|clk_50hz_count[1]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.559      ;
+; -2.518 ; clk_generator:clk_generator_0|clk_50hz_count[20] ; clk_generator:clk_generator_0|clk_50hz_count[2]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.559      ;
+; -2.518 ; clk_generator:clk_generator_0|clk_50hz_count[20] ; clk_generator:clk_generator_0|clk_50hz_count[3]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.559      ;
+; -2.518 ; clk_generator:clk_generator_0|clk_50hz_count[20] ; clk_generator:clk_generator_0|clk_50hz_count[4]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.559      ;
+; -2.518 ; clk_generator:clk_generator_0|clk_50hz_count[20] ; clk_generator:clk_generator_0|clk_50hz_count[5]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.559      ;
+; -2.518 ; clk_generator:clk_generator_0|clk_50hz_count[20] ; clk_generator:clk_generator_0|clk_50hz_count[6]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.559      ;
+; -2.518 ; clk_generator:clk_generator_0|clk_50hz_count[20] ; clk_generator:clk_generator_0|clk_50hz_count[7]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.559      ;
+; -2.518 ; clk_generator:clk_generator_0|clk_50hz_count[20] ; clk_generator:clk_generator_0|clk_50hz_count[8]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.559      ;
+; -2.518 ; clk_generator:clk_generator_0|clk_50hz_count[20] ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.559      ;
+; -2.518 ; clk_generator:clk_generator_0|clk_50hz_count[20] ; clk_generator:clk_generator_0|clk_50hz_count[10] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.559      ;
+; -2.518 ; clk_generator:clk_generator_0|clk_50hz_count[20] ; clk_generator:clk_generator_0|clk_50hz_count[11] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.559      ;
+; -2.518 ; clk_generator:clk_generator_0|clk_50hz_count[20] ; clk_generator:clk_generator_0|clk_50hz_count[12] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.559      ;
+; -2.518 ; clk_generator:clk_generator_0|clk_50hz_count[20] ; clk_generator:clk_generator_0|clk_50hz_count[13] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.559      ;
+; -2.518 ; clk_generator:clk_generator_0|clk_50hz_count[20] ; clk_generator:clk_generator_0|clk_50hz_count[14] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.559      ;
+; -2.518 ; clk_generator:clk_generator_0|clk_50hz_count[20] ; clk_generator:clk_generator_0|clk_50hz_count[15] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.559      ;
+; -2.514 ; clk_generator:clk_generator_0|clk_50hz_count[4]  ; clk_generator:clk_generator_0|clk_50hz_count[31] ; clk_50megahz ; clk_50megahz ; 1.000        ; -0.005     ; 3.545      ;
+; -2.514 ; clk_generator:clk_generator_0|clk_50hz_count[2]  ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_50megahz ; clk_50megahz ; 1.000        ; -0.005     ; 3.545      ;
+; -2.513 ; clk_generator:clk_generator_0|clk_50hz_count[1]  ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_50megahz ; clk_50megahz ; 1.000        ; -0.005     ; 3.544      ;
+; -2.503 ; clk_generator:clk_generator_0|clk_50hz_count[0]  ; clk_generator:clk_generator_0|clk_50hz_count[27] ; clk_50megahz ; clk_50megahz ; 1.000        ; -0.005     ; 3.534      ;
+; -2.485 ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_generator:clk_generator_0|clk_50hz_count[0]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.000      ; 3.521      ;
+; -2.485 ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_generator:clk_generator_0|clk_50hz_count[1]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.000      ; 3.521      ;
+; -2.485 ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_generator:clk_generator_0|clk_50hz_count[2]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.000      ; 3.521      ;
+; -2.485 ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_generator:clk_generator_0|clk_50hz_count[3]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.000      ; 3.521      ;
+; -2.485 ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_generator:clk_generator_0|clk_50hz_count[4]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.000      ; 3.521      ;
+; -2.485 ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_generator:clk_generator_0|clk_50hz_count[5]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.000      ; 3.521      ;
+; -2.485 ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_generator:clk_generator_0|clk_50hz_count[6]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.000      ; 3.521      ;
+; -2.485 ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_generator:clk_generator_0|clk_50hz_count[7]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.000      ; 3.521      ;
+; -2.485 ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_generator:clk_generator_0|clk_50hz_count[8]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.000      ; 3.521      ;
+; -2.485 ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.000      ; 3.521      ;
+; -2.485 ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_generator:clk_generator_0|clk_50hz_count[10] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.000      ; 3.521      ;
+; -2.485 ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_generator:clk_generator_0|clk_50hz_count[11] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.000      ; 3.521      ;
+; -2.485 ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_generator:clk_generator_0|clk_50hz_count[12] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.000      ; 3.521      ;
+; -2.485 ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_generator:clk_generator_0|clk_50hz_count[13] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.000      ; 3.521      ;
+; -2.485 ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_generator:clk_generator_0|clk_50hz_count[14] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.000      ; 3.521      ;
+; -2.485 ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_generator:clk_generator_0|clk_50hz_count[15] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.000      ; 3.521      ;
+; -2.483 ; clk_generator:clk_generator_0|clk_50hz_count[18] ; clk_generator:clk_generator_0|clk_50hz_count[0]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.524      ;
+; -2.483 ; clk_generator:clk_generator_0|clk_50hz_count[18] ; clk_generator:clk_generator_0|clk_50hz_count[1]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.524      ;
+; -2.483 ; clk_generator:clk_generator_0|clk_50hz_count[18] ; clk_generator:clk_generator_0|clk_50hz_count[2]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.524      ;
+; -2.483 ; clk_generator:clk_generator_0|clk_50hz_count[18] ; clk_generator:clk_generator_0|clk_50hz_count[3]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.524      ;
+; -2.483 ; clk_generator:clk_generator_0|clk_50hz_count[18] ; clk_generator:clk_generator_0|clk_50hz_count[4]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.524      ;
+; -2.483 ; clk_generator:clk_generator_0|clk_50hz_count[18] ; clk_generator:clk_generator_0|clk_50hz_count[5]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.524      ;
+; -2.483 ; clk_generator:clk_generator_0|clk_50hz_count[18] ; clk_generator:clk_generator_0|clk_50hz_count[6]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.524      ;
+; -2.483 ; clk_generator:clk_generator_0|clk_50hz_count[18] ; clk_generator:clk_generator_0|clk_50hz_count[7]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.524      ;
+; -2.483 ; clk_generator:clk_generator_0|clk_50hz_count[18] ; clk_generator:clk_generator_0|clk_50hz_count[8]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.524      ;
+; -2.483 ; clk_generator:clk_generator_0|clk_50hz_count[18] ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.524      ;
+; -2.483 ; clk_generator:clk_generator_0|clk_50hz_count[18] ; clk_generator:clk_generator_0|clk_50hz_count[10] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.524      ;
+; -2.483 ; clk_generator:clk_generator_0|clk_50hz_count[18] ; clk_generator:clk_generator_0|clk_50hz_count[11] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.524      ;
+; -2.483 ; clk_generator:clk_generator_0|clk_50hz_count[18] ; clk_generator:clk_generator_0|clk_50hz_count[12] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.524      ;
+; -2.483 ; clk_generator:clk_generator_0|clk_50hz_count[18] ; clk_generator:clk_generator_0|clk_50hz_count[13] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.524      ;
+; -2.483 ; clk_generator:clk_generator_0|clk_50hz_count[18] ; clk_generator:clk_generator_0|clk_50hz_count[14] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.524      ;
+; -2.483 ; clk_generator:clk_generator_0|clk_50hz_count[18] ; clk_generator:clk_generator_0|clk_50hz_count[15] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.524      ;
+; -2.479 ; clk_generator:clk_generator_0|clk_50hz_count[5]  ; clk_generator:clk_generator_0|clk_50hz_count[31] ; clk_50megahz ; clk_50megahz ; 1.000        ; -0.005     ; 3.510      ;
+; -2.478 ; clk_generator:clk_generator_0|clk_50hz_count[3]  ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_50megahz ; clk_50megahz ; 1.000        ; -0.005     ; 3.509      ;
+; -2.475 ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_generator:clk_generator_0|clk_50hz_count[0]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.516      ;
+; -2.475 ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_generator:clk_generator_0|clk_50hz_count[1]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.516      ;
+; -2.475 ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_generator:clk_generator_0|clk_50hz_count[2]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.516      ;
+; -2.475 ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_generator:clk_generator_0|clk_50hz_count[3]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.516      ;
+; -2.475 ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_generator:clk_generator_0|clk_50hz_count[4]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.516      ;
+; -2.475 ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_generator:clk_generator_0|clk_50hz_count[5]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.516      ;
+; -2.475 ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_generator:clk_generator_0|clk_50hz_count[6]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.516      ;
+; -2.475 ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_generator:clk_generator_0|clk_50hz_count[7]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.516      ;
+; -2.475 ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_generator:clk_generator_0|clk_50hz_count[8]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.516      ;
+; -2.475 ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.516      ;
+; -2.475 ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_generator:clk_generator_0|clk_50hz_count[10] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.516      ;
+; -2.475 ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_generator:clk_generator_0|clk_50hz_count[11] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.516      ;
+; -2.475 ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_generator:clk_generator_0|clk_50hz_count[12] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.516      ;
+; -2.475 ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_generator:clk_generator_0|clk_50hz_count[13] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.516      ;
+; -2.475 ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_generator:clk_generator_0|clk_50hz_count[14] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.516      ;
+; -2.475 ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_generator:clk_generator_0|clk_50hz_count[15] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 3.516      ;
+; -2.443 ; clk_generator:clk_generator_0|clk_50hz_count[4]  ; clk_generator:clk_generator_0|clk_50hz_count[30] ; clk_50megahz ; clk_50megahz ; 1.000        ; -0.005     ; 3.474      ;
+; -2.443 ; clk_generator:clk_generator_0|clk_50hz_count[2]  ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_50megahz ; clk_50megahz ; 1.000        ; -0.005     ; 3.474      ;
+; -2.442 ; clk_generator:clk_generator_0|clk_50hz_count[1]  ; clk_generator:clk_generator_0|clk_50hz_count[27] ; clk_50megahz ; clk_50megahz ; 1.000        ; -0.005     ; 3.473      ;
++--------+--------------------------------------------------+--------------------------------------------------+--------------+--------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk_50megahz'                                                                                                                                                                               ;
++--------+--------------------------------------------------+--------------------------------------------------+----------------------------------------+--------------+--------------+------------+------------+
+; Slack  ; From Node                                        ; To Node                                          ; Launch Clock                           ; Latch Clock  ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------------------+--------------------------------------------------+----------------------------------------+--------------+--------------+------------+------------+
+; -2.524 ; clk_generator:clk_generator_0|clk_50hz           ; clk_generator:clk_generator_0|clk_50hz           ; clk_generator:clk_generator_0|clk_50hz ; clk_50megahz ; 0.000        ; 2.665      ; 0.657      ;
+; -2.024 ; clk_generator:clk_generator_0|clk_50hz           ; clk_generator:clk_generator_0|clk_50hz           ; clk_generator:clk_generator_0|clk_50hz ; clk_50megahz ; -0.500       ; 2.665      ; 0.657      ;
+; 0.531  ; clk_generator:clk_generator_0|clk_50hz_count[31] ; clk_generator:clk_generator_0|clk_50hz_count[31] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.797      ;
+; 0.788  ; clk_generator:clk_generator_0|clk_50hz_count[0]  ; clk_generator:clk_generator_0|clk_50hz_count[0]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.054      ;
+; 0.795  ; clk_generator:clk_generator_0|clk_50hz_count[16] ; clk_generator:clk_generator_0|clk_50hz_count[16] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.061      ;
+; 0.798  ; clk_generator:clk_generator_0|clk_50hz_count[1]  ; clk_generator:clk_generator_0|clk_50hz_count[1]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.064      ;
+; 0.799  ; clk_generator:clk_generator_0|clk_50hz_count[2]  ; clk_generator:clk_generator_0|clk_50hz_count[2]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.065      ;
+; 0.799  ; clk_generator:clk_generator_0|clk_50hz_count[4]  ; clk_generator:clk_generator_0|clk_50hz_count[4]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.065      ;
+; 0.805  ; clk_generator:clk_generator_0|clk_50hz_count[17] ; clk_generator:clk_generator_0|clk_50hz_count[17] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.071      ;
+; 0.806  ; clk_generator:clk_generator_0|clk_50hz_count[7]  ; clk_generator:clk_generator_0|clk_50hz_count[7]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806  ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806  ; clk_generator:clk_generator_0|clk_50hz_count[11] ; clk_generator:clk_generator_0|clk_50hz_count[11] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806  ; clk_generator:clk_generator_0|clk_50hz_count[13] ; clk_generator:clk_generator_0|clk_50hz_count[13] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806  ; clk_generator:clk_generator_0|clk_50hz_count[14] ; clk_generator:clk_generator_0|clk_50hz_count[14] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806  ; clk_generator:clk_generator_0|clk_50hz_count[18] ; clk_generator:clk_generator_0|clk_50hz_count[18] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806  ; clk_generator:clk_generator_0|clk_50hz_count[20] ; clk_generator:clk_generator_0|clk_50hz_count[20] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806  ; clk_generator:clk_generator_0|clk_50hz_count[23] ; clk_generator:clk_generator_0|clk_50hz_count[23] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806  ; clk_generator:clk_generator_0|clk_50hz_count[25] ; clk_generator:clk_generator_0|clk_50hz_count[25] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806  ; clk_generator:clk_generator_0|clk_50hz_count[27] ; clk_generator:clk_generator_0|clk_50hz_count[27] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806  ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806  ; clk_generator:clk_generator_0|clk_50hz_count[30] ; clk_generator:clk_generator_0|clk_50hz_count[30] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.072      ;
+; 0.814  ; clk_generator:clk_generator_0|clk_50hz_count[15] ; clk_generator:clk_generator_0|clk_50hz_count[15] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.080      ;
+; 0.831  ; clk_generator:clk_generator_0|clk_50hz_count[3]  ; clk_generator:clk_generator_0|clk_50hz_count[3]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.097      ;
+; 0.832  ; clk_generator:clk_generator_0|clk_50hz_count[5]  ; clk_generator:clk_generator_0|clk_50hz_count[5]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.098      ;
+; 0.838  ; clk_generator:clk_generator_0|clk_50hz_count[8]  ; clk_generator:clk_generator_0|clk_50hz_count[8]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.104      ;
+; 0.838  ; clk_generator:clk_generator_0|clk_50hz_count[10] ; clk_generator:clk_generator_0|clk_50hz_count[10] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.104      ;
+; 0.838  ; clk_generator:clk_generator_0|clk_50hz_count[12] ; clk_generator:clk_generator_0|clk_50hz_count[12] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.104      ;
+; 0.838  ; clk_generator:clk_generator_0|clk_50hz_count[19] ; clk_generator:clk_generator_0|clk_50hz_count[19] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.104      ;
+; 0.838  ; clk_generator:clk_generator_0|clk_50hz_count[24] ; clk_generator:clk_generator_0|clk_50hz_count[24] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.104      ;
+; 0.838  ; clk_generator:clk_generator_0|clk_50hz_count[26] ; clk_generator:clk_generator_0|clk_50hz_count[26] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.104      ;
+; 0.838  ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.104      ;
+; 0.839  ; clk_generator:clk_generator_0|clk_50hz_count[6]  ; clk_generator:clk_generator_0|clk_50hz_count[6]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.105      ;
+; 0.839  ; clk_generator:clk_generator_0|clk_50hz_count[21] ; clk_generator:clk_generator_0|clk_50hz_count[21] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.105      ;
+; 0.839  ; clk_generator:clk_generator_0|clk_50hz_count[22] ; clk_generator:clk_generator_0|clk_50hz_count[22] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.105      ;
+; 0.957  ; clk_generator:clk_generator_0|clk_50hz_count[15] ; clk_generator:clk_generator_0|clk_50hz           ; clk_50megahz                           ; clk_50megahz ; 0.000        ; -0.004     ; 1.219      ;
+; 1.171  ; clk_generator:clk_generator_0|clk_50hz_count[0]  ; clk_generator:clk_generator_0|clk_50hz_count[1]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.437      ;
+; 1.178  ; clk_generator:clk_generator_0|clk_50hz_count[16] ; clk_generator:clk_generator_0|clk_50hz_count[17] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.444      ;
+; 1.181  ; clk_generator:clk_generator_0|clk_50hz_count[1]  ; clk_generator:clk_generator_0|clk_50hz_count[2]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.447      ;
+; 1.182  ; clk_generator:clk_generator_0|clk_50hz_count[2]  ; clk_generator:clk_generator_0|clk_50hz_count[3]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.448      ;
+; 1.182  ; clk_generator:clk_generator_0|clk_50hz_count[4]  ; clk_generator:clk_generator_0|clk_50hz_count[5]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.448      ;
+; 1.188  ; clk_generator:clk_generator_0|clk_50hz_count[17] ; clk_generator:clk_generator_0|clk_50hz_count[18] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.454      ;
+; 1.189  ; clk_generator:clk_generator_0|clk_50hz_count[30] ; clk_generator:clk_generator_0|clk_50hz_count[31] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189  ; clk_generator:clk_generator_0|clk_50hz_count[13] ; clk_generator:clk_generator_0|clk_50hz_count[14] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189  ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_generator:clk_generator_0|clk_50hz_count[30] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189  ; clk_generator:clk_generator_0|clk_50hz_count[14] ; clk_generator:clk_generator_0|clk_50hz_count[15] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189  ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_generator:clk_generator_0|clk_50hz_count[10] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189  ; clk_generator:clk_generator_0|clk_50hz_count[11] ; clk_generator:clk_generator_0|clk_50hz_count[12] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189  ; clk_generator:clk_generator_0|clk_50hz_count[18] ; clk_generator:clk_generator_0|clk_50hz_count[19] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189  ; clk_generator:clk_generator_0|clk_50hz_count[25] ; clk_generator:clk_generator_0|clk_50hz_count[26] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189  ; clk_generator:clk_generator_0|clk_50hz_count[27] ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189  ; clk_generator:clk_generator_0|clk_50hz_count[20] ; clk_generator:clk_generator_0|clk_50hz_count[21] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.455      ;
+; 1.217  ; clk_generator:clk_generator_0|clk_50hz_count[3]  ; clk_generator:clk_generator_0|clk_50hz_count[4]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.483      ;
+; 1.218  ; clk_generator:clk_generator_0|clk_50hz_count[5]  ; clk_generator:clk_generator_0|clk_50hz_count[6]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.484      ;
+; 1.224  ; clk_generator:clk_generator_0|clk_50hz_count[8]  ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.490      ;
+; 1.224  ; clk_generator:clk_generator_0|clk_50hz_count[10] ; clk_generator:clk_generator_0|clk_50hz_count[11] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.490      ;
+; 1.224  ; clk_generator:clk_generator_0|clk_50hz_count[12] ; clk_generator:clk_generator_0|clk_50hz_count[13] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.490      ;
+; 1.224  ; clk_generator:clk_generator_0|clk_50hz_count[19] ; clk_generator:clk_generator_0|clk_50hz_count[20] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.490      ;
+; 1.224  ; clk_generator:clk_generator_0|clk_50hz_count[24] ; clk_generator:clk_generator_0|clk_50hz_count[25] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.490      ;
+; 1.224  ; clk_generator:clk_generator_0|clk_50hz_count[26] ; clk_generator:clk_generator_0|clk_50hz_count[27] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.490      ;
+; 1.224  ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.490      ;
+; 1.225  ; clk_generator:clk_generator_0|clk_50hz_count[6]  ; clk_generator:clk_generator_0|clk_50hz_count[7]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.491      ;
+; 1.225  ; clk_generator:clk_generator_0|clk_50hz_count[22] ; clk_generator:clk_generator_0|clk_50hz_count[23] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.491      ;
+; 1.225  ; clk_generator:clk_generator_0|clk_50hz_count[21] ; clk_generator:clk_generator_0|clk_50hz_count[22] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.491      ;
+; 1.242  ; clk_generator:clk_generator_0|clk_50hz_count[0]  ; clk_generator:clk_generator_0|clk_50hz_count[2]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.508      ;
+; 1.249  ; clk_generator:clk_generator_0|clk_50hz_count[16] ; clk_generator:clk_generator_0|clk_50hz_count[18] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.515      ;
+; 1.252  ; clk_generator:clk_generator_0|clk_50hz_count[1]  ; clk_generator:clk_generator_0|clk_50hz_count[3]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.518      ;
+; 1.253  ; clk_generator:clk_generator_0|clk_50hz_count[2]  ; clk_generator:clk_generator_0|clk_50hz_count[4]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.519      ;
+; 1.253  ; clk_generator:clk_generator_0|clk_50hz_count[4]  ; clk_generator:clk_generator_0|clk_50hz_count[6]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.519      ;
+; 1.259  ; clk_generator:clk_generator_0|clk_50hz_count[17] ; clk_generator:clk_generator_0|clk_50hz_count[19] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.525      ;
+; 1.260  ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_generator:clk_generator_0|clk_50hz_count[31] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.526      ;
+; 1.260  ; clk_generator:clk_generator_0|clk_50hz_count[13] ; clk_generator:clk_generator_0|clk_50hz_count[15] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.526      ;
+; 1.260  ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_generator:clk_generator_0|clk_50hz_count[11] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.526      ;
+; 1.260  ; clk_generator:clk_generator_0|clk_50hz_count[11] ; clk_generator:clk_generator_0|clk_50hz_count[13] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.526      ;
+; 1.260  ; clk_generator:clk_generator_0|clk_50hz_count[18] ; clk_generator:clk_generator_0|clk_50hz_count[20] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.526      ;
+; 1.260  ; clk_generator:clk_generator_0|clk_50hz_count[25] ; clk_generator:clk_generator_0|clk_50hz_count[27] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.526      ;
+; 1.260  ; clk_generator:clk_generator_0|clk_50hz_count[27] ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.526      ;
+; 1.260  ; clk_generator:clk_generator_0|clk_50hz_count[20] ; clk_generator:clk_generator_0|clk_50hz_count[22] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.526      ;
+; 1.281  ; clk_generator:clk_generator_0|clk_50hz_count[7]  ; clk_generator:clk_generator_0|clk_50hz_count[8]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.547      ;
+; 1.281  ; clk_generator:clk_generator_0|clk_50hz_count[23] ; clk_generator:clk_generator_0|clk_50hz_count[24] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.547      ;
+; 1.288  ; clk_generator:clk_generator_0|clk_50hz_count[3]  ; clk_generator:clk_generator_0|clk_50hz_count[5]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.554      ;
+; 1.289  ; clk_generator:clk_generator_0|clk_50hz_count[5]  ; clk_generator:clk_generator_0|clk_50hz_count[7]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.555      ;
+; 1.294  ; clk_generator:clk_generator_0|clk_50hz_count[15] ; clk_generator:clk_generator_0|clk_50hz_count[16] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; -0.005     ; 1.555      ;
+; 1.295  ; clk_generator:clk_generator_0|clk_50hz_count[12] ; clk_generator:clk_generator_0|clk_50hz_count[14] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.561      ;
+; 1.295  ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_generator:clk_generator_0|clk_50hz_count[30] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.561      ;
+; 1.295  ; clk_generator:clk_generator_0|clk_50hz_count[8]  ; clk_generator:clk_generator_0|clk_50hz_count[10] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.561      ;
+; 1.295  ; clk_generator:clk_generator_0|clk_50hz_count[10] ; clk_generator:clk_generator_0|clk_50hz_count[12] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.561      ;
+; 1.295  ; clk_generator:clk_generator_0|clk_50hz_count[24] ; clk_generator:clk_generator_0|clk_50hz_count[26] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.561      ;
+; 1.295  ; clk_generator:clk_generator_0|clk_50hz_count[26] ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.561      ;
+; 1.295  ; clk_generator:clk_generator_0|clk_50hz_count[19] ; clk_generator:clk_generator_0|clk_50hz_count[21] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.561      ;
+; 1.296  ; clk_generator:clk_generator_0|clk_50hz_count[21] ; clk_generator:clk_generator_0|clk_50hz_count[23] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.562      ;
+; 1.313  ; clk_generator:clk_generator_0|clk_50hz_count[0]  ; clk_generator:clk_generator_0|clk_50hz_count[3]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.579      ;
+; 1.320  ; clk_generator:clk_generator_0|clk_50hz_count[16] ; clk_generator:clk_generator_0|clk_50hz_count[19] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.586      ;
+; 1.323  ; clk_generator:clk_generator_0|clk_50hz_count[1]  ; clk_generator:clk_generator_0|clk_50hz_count[4]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.589      ;
+; 1.324  ; clk_generator:clk_generator_0|clk_50hz_count[2]  ; clk_generator:clk_generator_0|clk_50hz_count[5]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.590      ;
+; 1.324  ; clk_generator:clk_generator_0|clk_50hz_count[4]  ; clk_generator:clk_generator_0|clk_50hz_count[7]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.590      ;
+; 1.330  ; clk_generator:clk_generator_0|clk_50hz_count[17] ; clk_generator:clk_generator_0|clk_50hz_count[20] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.596      ;
+; 1.331  ; clk_generator:clk_generator_0|clk_50hz_count[11] ; clk_generator:clk_generator_0|clk_50hz_count[14] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.597      ;
+; 1.331  ; clk_generator:clk_generator_0|clk_50hz_count[27] ; clk_generator:clk_generator_0|clk_50hz_count[30] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.597      ;
+; 1.331  ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_generator:clk_generator_0|clk_50hz_count[12] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.597      ;
+; 1.331  ; clk_generator:clk_generator_0|clk_50hz_count[25] ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 1.597      ;
++--------+--------------------------------------------------+--------------------------------------------------+----------------------------------------+--------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk_50megahz'                                                                                           ;
++--------+--------------+----------------+------------------+--------------+------------+--------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock        ; Clock Edge ; Target                                           ;
++--------+--------------+----------------+------------------+--------------+------------+--------------------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk_50megahz ; Rise       ; clk_50megahz                                     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[10] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[10] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[11] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[11] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[12] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[12] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[13] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[13] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[14] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[14] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[15] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[15] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[16] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[16] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[17] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[17] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[18] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[18] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[19] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[19] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[20] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[20] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[21] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[21] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[22] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[22] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[23] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[23] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[24] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[24] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[25] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[25] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[26] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[26] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[27] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[27] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[28] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[28] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[29] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[29] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[30] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[30] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[31] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[31] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[9]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_50megahz|combout                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_50megahz|combout                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_50megahz~clkctrl|inclk[0]                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_50megahz~clkctrl|inclk[0]                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_50megahz~clkctrl|outclk                      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_50megahz~clkctrl|outclk                      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[0]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[0]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[10]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[10]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[11]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[11]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[12]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[12]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[13]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[13]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[14]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[14]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[15]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[15]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[16]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[16]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[17]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[17]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[18]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[18]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[19]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[19]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[1]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[1]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[20]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[20]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[21]|clk           ;
++--------+--------------+----------------+------------------+--------------+------------+--------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk_generator:clk_generator_0|clk_50hz'                                                                                    ;
++--------+--------------+----------------+------------------+----------------------------------------+------------+-------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock                                  ; Clock Edge ; Target                                    ;
++--------+--------------+----------------+------------------+----------------------------------------+------------+-------------------------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg:temp_reg_0|reg_a[0]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg:temp_reg_0|reg_a[0]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg:temp_reg_0|reg_a[1]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg:temp_reg_0|reg_a[1]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg:temp_reg_0|reg_a[2]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg:temp_reg_0|reg_a[2]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg:temp_reg_0|reg_a[3]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg:temp_reg_0|reg_a[3]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg:temp_reg_0|reg_b[0]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg:temp_reg_0|reg_b[0]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg:temp_reg_0|reg_b[1]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg:temp_reg_0|reg_b[1]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg:temp_reg_0|reg_b[2]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg:temp_reg_0|reg_b[2]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg:temp_reg_0|reg_b[3]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg:temp_reg_0|reg_b[3]              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; clk_generator_0|clk_50hz|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; clk_generator_0|clk_50hz|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; clk_generator_0|clk_50hz~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; clk_generator_0|clk_50hz~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; clk_generator_0|clk_50hz~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; clk_generator_0|clk_50hz~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg_0|reg_a[0]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg_0|reg_a[0]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg_0|reg_a[1]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg_0|reg_a[1]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg_0|reg_a[2]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg_0|reg_a[2]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg_0|reg_a[3]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg_0|reg_a[3]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg_0|reg_b[0]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg_0|reg_b[0]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg_0|reg_b[1]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg_0|reg_b[1]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg_0|reg_b[2]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg_0|reg_b[2]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg_0|reg_b[3]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg_0|reg_b[3]|clk                   ;
++--------+--------------+----------------+------------------+----------------------------------------+------------+-------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Setup Times                                                                                                                ;
++-----------+----------------------------------------+--------+--------+------------+----------------------------------------+
+; Data Port ; Clock Port                             ; Rise   ; Fall   ; Clock Edge ; Clock Reference                        ;
++-----------+----------------------------------------+--------+--------+------------+----------------------------------------+
+; rst       ; clk_generator:clk_generator_0|clk_50hz ; 1.031  ; 1.031  ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+; sw_a[*]   ; clk_generator:clk_generator_0|clk_50hz ; 3.793  ; 3.793  ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  sw_a[0]  ; clk_generator:clk_generator_0|clk_50hz ; -0.472 ; -0.472 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  sw_a[1]  ; clk_generator:clk_generator_0|clk_50hz ; 3.793  ; 3.793  ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  sw_a[2]  ; clk_generator:clk_generator_0|clk_50hz ; 3.585  ; 3.585  ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  sw_a[3]  ; clk_generator:clk_generator_0|clk_50hz ; 3.790  ; 3.790  ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+; sw_b[*]   ; clk_generator:clk_generator_0|clk_50hz ; 3.410  ; 3.410  ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  sw_b[0]  ; clk_generator:clk_generator_0|clk_50hz ; 3.314  ; 3.314  ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  sw_b[1]  ; clk_generator:clk_generator_0|clk_50hz ; 3.322  ; 3.322  ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  sw_b[2]  ; clk_generator:clk_generator_0|clk_50hz ; 3.281  ; 3.281  ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  sw_b[3]  ; clk_generator:clk_generator_0|clk_50hz ; 3.410  ; 3.410  ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
++-----------+----------------------------------------+--------+--------+------------+----------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Hold Times                                                                                                                 ;
++-----------+----------------------------------------+--------+--------+------------+----------------------------------------+
+; Data Port ; Clock Port                             ; Rise   ; Fall   ; Clock Edge ; Clock Reference                        ;
++-----------+----------------------------------------+--------+--------+------------+----------------------------------------+
+; rst       ; clk_generator:clk_generator_0|clk_50hz ; -0.358 ; -0.358 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+; sw_a[*]   ; clk_generator:clk_generator_0|clk_50hz ; 0.702  ; 0.702  ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  sw_a[0]  ; clk_generator:clk_generator_0|clk_50hz ; 0.702  ; 0.702  ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  sw_a[1]  ; clk_generator:clk_generator_0|clk_50hz ; -3.563 ; -3.563 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  sw_a[2]  ; clk_generator:clk_generator_0|clk_50hz ; -3.355 ; -3.355 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  sw_a[3]  ; clk_generator:clk_generator_0|clk_50hz ; -3.560 ; -3.560 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+; sw_b[*]   ; clk_generator:clk_generator_0|clk_50hz ; -3.051 ; -3.051 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  sw_b[0]  ; clk_generator:clk_generator_0|clk_50hz ; -3.084 ; -3.084 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  sw_b[1]  ; clk_generator:clk_generator_0|clk_50hz ; -3.092 ; -3.092 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  sw_b[2]  ; clk_generator:clk_generator_0|clk_50hz ; -3.051 ; -3.051 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  sw_b[3]  ; clk_generator:clk_generator_0|clk_50hz ; -3.180 ; -3.180 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
++-----------+----------------------------------------+--------+--------+------------+----------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                                           ;
++------------------+----------------------------------------+-------+-------+------------+----------------------------------------+
+; Data Port        ; Clock Port                             ; Rise  ; Fall  ; Clock Edge ; Clock Reference                        ;
++------------------+----------------------------------------+-------+-------+------------+----------------------------------------+
+; segment_a[0][*]  ; clk_generator:clk_generator_0|clk_50hz ; 7.426 ; 7.426 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[0][1] ; clk_generator:clk_generator_0|clk_50hz ; 7.008 ; 7.008 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[0][2] ; clk_generator:clk_generator_0|clk_50hz ; 7.426 ; 7.426 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[0][3] ; clk_generator:clk_generator_0|clk_50hz ; 7.426 ; 7.426 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[0][4] ; clk_generator:clk_generator_0|clk_50hz ; 6.943 ; 6.943 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[0][5] ; clk_generator:clk_generator_0|clk_50hz ; 7.425 ; 7.425 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[0][6] ; clk_generator:clk_generator_0|clk_50hz ; 7.188 ; 7.188 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+; segment_a[1][*]  ; clk_generator:clk_generator_0|clk_50hz ; 7.280 ; 7.280 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[1][0] ; clk_generator:clk_generator_0|clk_50hz ; 6.984 ; 6.984 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[1][1] ; clk_generator:clk_generator_0|clk_50hz ; 7.192 ; 7.192 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[1][2] ; clk_generator:clk_generator_0|clk_50hz ; 7.193 ; 7.193 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[1][3] ; clk_generator:clk_generator_0|clk_50hz ; 7.019 ; 7.019 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[1][4] ; clk_generator:clk_generator_0|clk_50hz ; 7.280 ; 7.280 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[1][5] ; clk_generator:clk_generator_0|clk_50hz ; 6.955 ; 6.955 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[1][6] ; clk_generator:clk_generator_0|clk_50hz ; 6.986 ; 6.986 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+; segment_b[0][*]  ; clk_generator:clk_generator_0|clk_50hz ; 7.156 ; 7.156 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[0][1] ; clk_generator:clk_generator_0|clk_50hz ; 6.715 ; 6.715 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[0][2] ; clk_generator:clk_generator_0|clk_50hz ; 6.997 ; 6.997 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[0][3] ; clk_generator:clk_generator_0|clk_50hz ; 7.027 ; 7.027 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[0][4] ; clk_generator:clk_generator_0|clk_50hz ; 6.984 ; 6.984 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[0][5] ; clk_generator:clk_generator_0|clk_50hz ; 6.940 ; 6.940 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[0][6] ; clk_generator:clk_generator_0|clk_50hz ; 7.156 ; 7.156 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+; segment_b[1][*]  ; clk_generator:clk_generator_0|clk_50hz ; 7.026 ; 7.026 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[1][0] ; clk_generator:clk_generator_0|clk_50hz ; 6.732 ; 6.732 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[1][1] ; clk_generator:clk_generator_0|clk_50hz ; 7.026 ; 7.026 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[1][2] ; clk_generator:clk_generator_0|clk_50hz ; 6.995 ; 6.995 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[1][3] ; clk_generator:clk_generator_0|clk_50hz ; 6.727 ; 6.727 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[1][4] ; clk_generator:clk_generator_0|clk_50hz ; 6.750 ; 6.750 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[1][5] ; clk_generator:clk_generator_0|clk_50hz ; 6.899 ; 6.899 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[1][6] ; clk_generator:clk_generator_0|clk_50hz ; 6.732 ; 6.732 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
++------------------+----------------------------------------+-------+-------+------------+----------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                                                   ;
++------------------+----------------------------------------+-------+-------+------------+----------------------------------------+
+; Data Port        ; Clock Port                             ; Rise  ; Fall  ; Clock Edge ; Clock Reference                        ;
++------------------+----------------------------------------+-------+-------+------------+----------------------------------------+
+; segment_a[0][*]  ; clk_generator:clk_generator_0|clk_50hz ; 6.676 ; 6.676 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[0][1] ; clk_generator:clk_generator_0|clk_50hz ; 6.729 ; 6.729 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[0][2] ; clk_generator:clk_generator_0|clk_50hz ; 7.147 ; 7.147 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[0][3] ; clk_generator:clk_generator_0|clk_50hz ; 7.147 ; 7.147 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[0][4] ; clk_generator:clk_generator_0|clk_50hz ; 6.676 ; 6.676 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[0][5] ; clk_generator:clk_generator_0|clk_50hz ; 7.168 ; 7.168 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[0][6] ; clk_generator:clk_generator_0|clk_50hz ; 6.917 ; 6.917 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+; segment_a[1][*]  ; clk_generator:clk_generator_0|clk_50hz ; 6.676 ; 6.676 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[1][0] ; clk_generator:clk_generator_0|clk_50hz ; 6.705 ; 6.705 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[1][1] ; clk_generator:clk_generator_0|clk_50hz ; 6.940 ; 6.940 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[1][2] ; clk_generator:clk_generator_0|clk_50hz ; 6.941 ; 6.941 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[1][3] ; clk_generator:clk_generator_0|clk_50hz ; 6.740 ; 6.740 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[1][4] ; clk_generator:clk_generator_0|clk_50hz ; 7.009 ; 7.009 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[1][5] ; clk_generator:clk_generator_0|clk_50hz ; 6.676 ; 6.676 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[1][6] ; clk_generator:clk_generator_0|clk_50hz ; 6.715 ; 6.715 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+; segment_b[0][*]  ; clk_generator:clk_generator_0|clk_50hz ; 6.396 ; 6.396 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[0][1] ; clk_generator:clk_generator_0|clk_50hz ; 6.396 ; 6.396 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[0][2] ; clk_generator:clk_generator_0|clk_50hz ; 6.775 ; 6.775 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[0][3] ; clk_generator:clk_generator_0|clk_50hz ; 6.805 ; 6.805 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[0][4] ; clk_generator:clk_generator_0|clk_50hz ; 6.672 ; 6.672 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[0][5] ; clk_generator:clk_generator_0|clk_50hz ; 6.658 ; 6.658 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[0][6] ; clk_generator:clk_generator_0|clk_50hz ; 6.839 ; 6.839 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+; segment_b[1][*]  ; clk_generator:clk_generator_0|clk_50hz ; 6.409 ; 6.409 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[1][0] ; clk_generator:clk_generator_0|clk_50hz ; 6.428 ; 6.428 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[1][1] ; clk_generator:clk_generator_0|clk_50hz ; 6.720 ; 6.720 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[1][2] ; clk_generator:clk_generator_0|clk_50hz ; 6.677 ; 6.677 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[1][3] ; clk_generator:clk_generator_0|clk_50hz ; 6.409 ; 6.409 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[1][4] ; clk_generator:clk_generator_0|clk_50hz ; 6.432 ; 6.432 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[1][5] ; clk_generator:clk_generator_0|clk_50hz ; 6.595 ; 6.595 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[1][6] ; clk_generator:clk_generator_0|clk_50hz ; 6.415 ; 6.415 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
++------------------+----------------------------------------+-------+-------+------------+----------------------------------------+
+
+
++-------------------------------------------------------+
+; Propagation Delay                                     ;
++------------+----------------+-------+----+----+-------+
+; Input Port ; Output Port    ; RR    ; RF ; FR ; FF    ;
++------------+----------------+-------+----+----+-------+
+; sw_a[0]    ; sw_a_led[0]    ; 4.763 ;    ;    ; 4.763 ;
+; sw_a[1]    ; sw_a_led[1]    ; 8.788 ;    ;    ; 8.788 ;
+; sw_a[2]    ; sw_a_led[2]    ; 8.805 ;    ;    ; 8.805 ;
+; sw_a[3]    ; sw_a_led[3]    ; 8.607 ;    ;    ; 8.607 ;
+; sw_b[0]    ; sw_b_led[0]    ; 8.153 ;    ;    ; 8.153 ;
+; sw_b[1]    ; sw_b_led[1]    ; 8.014 ;    ;    ; 8.014 ;
+; sw_b[2]    ; sw_b_led[2]    ; 8.105 ;    ;    ; 8.105 ;
+; sw_b[3]    ; sw_b_led[3]    ; 8.847 ;    ;    ; 8.847 ;
+; sw_mode[0] ; sw_mode_led[0] ; 7.914 ;    ;    ; 7.914 ;
+; sw_mode[1] ; sw_mode_led[1] ; 8.006 ;    ;    ; 8.006 ;
++------------+----------------+-------+----+----+-------+
+
+
++-------------------------------------------------------+
+; Minimum Propagation Delay                             ;
++------------+----------------+-------+----+----+-------+
+; Input Port ; Output Port    ; RR    ; RF ; FR ; FF    ;
++------------+----------------+-------+----+----+-------+
+; sw_a[0]    ; sw_a_led[0]    ; 4.763 ;    ;    ; 4.763 ;
+; sw_a[1]    ; sw_a_led[1]    ; 8.788 ;    ;    ; 8.788 ;
+; sw_a[2]    ; sw_a_led[2]    ; 8.805 ;    ;    ; 8.805 ;
+; sw_a[3]    ; sw_a_led[3]    ; 8.607 ;    ;    ; 8.607 ;
+; sw_b[0]    ; sw_b_led[0]    ; 8.153 ;    ;    ; 8.153 ;
+; sw_b[1]    ; sw_b_led[1]    ; 8.014 ;    ;    ; 8.014 ;
+; sw_b[2]    ; sw_b_led[2]    ; 8.105 ;    ;    ; 8.105 ;
+; sw_b[3]    ; sw_b_led[3]    ; 8.847 ;    ;    ; 8.847 ;
+; sw_mode[0] ; sw_mode_led[0] ; 7.914 ;    ;    ; 7.914 ;
+; sw_mode[1] ; sw_mode_led[1] ; 8.006 ;    ;    ; 8.006 ;
++------------+----------------+-------+----+----+-------+
+
+
++---------------------------------------+
+; Fast Model Setup Summary              ;
++--------------+--------+---------------+
+; Clock        ; Slack  ; End Point TNS ;
++--------------+--------+---------------+
+; clk_50megahz ; -0.836 ; -20.705       ;
++--------------+--------+---------------+
+
+
++---------------------------------------+
+; Fast Model Hold Summary               ;
++--------------+--------+---------------+
+; Clock        ; Slack  ; End Point TNS ;
++--------------+--------+---------------+
+; clk_50megahz ; -1.568 ; -1.568        ;
++--------------+--------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++-----------------------------------------------------------------+
+; Fast Model Minimum Pulse Width Summary                          ;
++----------------------------------------+--------+---------------+
+; Clock                                  ; Slack  ; End Point TNS ;
++----------------------------------------+--------+---------------+
+; clk_50megahz                           ; -1.380 ; -34.380       ;
+; clk_generator:clk_generator_0|clk_50hz ; -0.500 ; -8.000        ;
++----------------------------------------+--------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk_50megahz'                                                                                                                                                    ;
++--------+--------------------------------------------------+--------------------------------------------------+--------------+--------------+--------------+------------+------------+
+; Slack  ; From Node                                        ; To Node                                          ; Launch Clock ; Latch Clock  ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------------------+--------------------------------------------------+--------------+--------------+--------------+------------+------------+
+; -0.836 ; clk_generator:clk_generator_0|clk_50hz_count[0]  ; clk_generator:clk_generator_0|clk_50hz_count[31] ; clk_50megahz ; clk_50megahz ; 1.000        ; -0.005     ; 1.863      ;
+; -0.805 ; clk_generator:clk_generator_0|clk_50hz_count[1]  ; clk_generator:clk_generator_0|clk_50hz_count[31] ; clk_50megahz ; clk_50megahz ; 1.000        ; -0.005     ; 1.832      ;
+; -0.801 ; clk_generator:clk_generator_0|clk_50hz_count[0]  ; clk_generator:clk_generator_0|clk_50hz_count[30] ; clk_50megahz ; clk_50megahz ; 1.000        ; -0.005     ; 1.828      ;
+; -0.771 ; clk_generator:clk_generator_0|clk_50hz_count[2]  ; clk_generator:clk_generator_0|clk_50hz_count[31] ; clk_50megahz ; clk_50megahz ; 1.000        ; -0.005     ; 1.798      ;
+; -0.770 ; clk_generator:clk_generator_0|clk_50hz_count[1]  ; clk_generator:clk_generator_0|clk_50hz_count[30] ; clk_50megahz ; clk_50megahz ; 1.000        ; -0.005     ; 1.797      ;
+; -0.766 ; clk_generator:clk_generator_0|clk_50hz_count[0]  ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_50megahz ; clk_50megahz ; 1.000        ; -0.005     ; 1.793      ;
+; -0.749 ; clk_generator:clk_generator_0|clk_50hz_count[3]  ; clk_generator:clk_generator_0|clk_50hz_count[31] ; clk_50megahz ; clk_50megahz ; 1.000        ; -0.005     ; 1.776      ;
+; -0.736 ; clk_generator:clk_generator_0|clk_50hz_count[2]  ; clk_generator:clk_generator_0|clk_50hz_count[30] ; clk_50megahz ; clk_50megahz ; 1.000        ; -0.005     ; 1.763      ;
+; -0.735 ; clk_generator:clk_generator_0|clk_50hz_count[1]  ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_50megahz ; clk_50megahz ; 1.000        ; -0.005     ; 1.762      ;
+; -0.731 ; clk_generator:clk_generator_0|clk_50hz_count[0]  ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_50megahz ; clk_50megahz ; 1.000        ; -0.005     ; 1.758      ;
+; -0.714 ; clk_generator:clk_generator_0|clk_50hz_count[3]  ; clk_generator:clk_generator_0|clk_50hz_count[30] ; clk_50megahz ; clk_50megahz ; 1.000        ; -0.005     ; 1.741      ;
+; -0.702 ; clk_generator:clk_generator_0|clk_50hz_count[4]  ; clk_generator:clk_generator_0|clk_50hz_count[31] ; clk_50megahz ; clk_50megahz ; 1.000        ; -0.005     ; 1.729      ;
+; -0.701 ; clk_generator:clk_generator_0|clk_50hz_count[2]  ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_50megahz ; clk_50megahz ; 1.000        ; -0.005     ; 1.728      ;
+; -0.700 ; clk_generator:clk_generator_0|clk_50hz_count[1]  ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_50megahz ; clk_50megahz ; 1.000        ; -0.005     ; 1.727      ;
+; -0.696 ; clk_generator:clk_generator_0|clk_50hz_count[0]  ; clk_generator:clk_generator_0|clk_50hz_count[27] ; clk_50megahz ; clk_50megahz ; 1.000        ; -0.005     ; 1.723      ;
+; -0.680 ; clk_generator:clk_generator_0|clk_50hz_count[5]  ; clk_generator:clk_generator_0|clk_50hz_count[31] ; clk_50megahz ; clk_50megahz ; 1.000        ; -0.005     ; 1.707      ;
+; -0.679 ; clk_generator:clk_generator_0|clk_50hz_count[3]  ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_50megahz ; clk_50megahz ; 1.000        ; -0.005     ; 1.706      ;
+; -0.667 ; clk_generator:clk_generator_0|clk_50hz_count[4]  ; clk_generator:clk_generator_0|clk_50hz_count[30] ; clk_50megahz ; clk_50megahz ; 1.000        ; -0.005     ; 1.694      ;
+; -0.666 ; clk_generator:clk_generator_0|clk_50hz_count[2]  ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_50megahz ; clk_50megahz ; 1.000        ; -0.005     ; 1.693      ;
+; -0.665 ; clk_generator:clk_generator_0|clk_50hz_count[1]  ; clk_generator:clk_generator_0|clk_50hz_count[27] ; clk_50megahz ; clk_50megahz ; 1.000        ; -0.005     ; 1.692      ;
+; -0.661 ; clk_generator:clk_generator_0|clk_50hz_count[0]  ; clk_generator:clk_generator_0|clk_50hz_count[26] ; clk_50megahz ; clk_50megahz ; 1.000        ; -0.005     ; 1.688      ;
+; -0.647 ; clk_generator:clk_generator_0|clk_50hz_count[6]  ; clk_generator:clk_generator_0|clk_50hz_count[31] ; clk_50megahz ; clk_50megahz ; 1.000        ; -0.005     ; 1.674      ;
+; -0.645 ; clk_generator:clk_generator_0|clk_50hz_count[5]  ; clk_generator:clk_generator_0|clk_50hz_count[30] ; clk_50megahz ; clk_50megahz ; 1.000        ; -0.005     ; 1.672      ;
+; -0.644 ; clk_generator:clk_generator_0|clk_50hz_count[3]  ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_50megahz ; clk_50megahz ; 1.000        ; -0.005     ; 1.671      ;
+; -0.637 ; clk_generator:clk_generator_0|clk_50hz_count[20] ; clk_generator:clk_generator_0|clk_50hz_count[0]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.674      ;
+; -0.637 ; clk_generator:clk_generator_0|clk_50hz_count[20] ; clk_generator:clk_generator_0|clk_50hz_count[1]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.674      ;
+; -0.637 ; clk_generator:clk_generator_0|clk_50hz_count[20] ; clk_generator:clk_generator_0|clk_50hz_count[2]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.674      ;
+; -0.637 ; clk_generator:clk_generator_0|clk_50hz_count[20] ; clk_generator:clk_generator_0|clk_50hz_count[3]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.674      ;
+; -0.637 ; clk_generator:clk_generator_0|clk_50hz_count[20] ; clk_generator:clk_generator_0|clk_50hz_count[4]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.674      ;
+; -0.637 ; clk_generator:clk_generator_0|clk_50hz_count[20] ; clk_generator:clk_generator_0|clk_50hz_count[5]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.674      ;
+; -0.637 ; clk_generator:clk_generator_0|clk_50hz_count[20] ; clk_generator:clk_generator_0|clk_50hz_count[6]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.674      ;
+; -0.637 ; clk_generator:clk_generator_0|clk_50hz_count[20] ; clk_generator:clk_generator_0|clk_50hz_count[7]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.674      ;
+; -0.637 ; clk_generator:clk_generator_0|clk_50hz_count[20] ; clk_generator:clk_generator_0|clk_50hz_count[8]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.674      ;
+; -0.637 ; clk_generator:clk_generator_0|clk_50hz_count[20] ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.674      ;
+; -0.637 ; clk_generator:clk_generator_0|clk_50hz_count[20] ; clk_generator:clk_generator_0|clk_50hz_count[10] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.674      ;
+; -0.637 ; clk_generator:clk_generator_0|clk_50hz_count[20] ; clk_generator:clk_generator_0|clk_50hz_count[11] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.674      ;
+; -0.637 ; clk_generator:clk_generator_0|clk_50hz_count[20] ; clk_generator:clk_generator_0|clk_50hz_count[12] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.674      ;
+; -0.637 ; clk_generator:clk_generator_0|clk_50hz_count[20] ; clk_generator:clk_generator_0|clk_50hz_count[13] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.674      ;
+; -0.637 ; clk_generator:clk_generator_0|clk_50hz_count[20] ; clk_generator:clk_generator_0|clk_50hz_count[14] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.674      ;
+; -0.637 ; clk_generator:clk_generator_0|clk_50hz_count[20] ; clk_generator:clk_generator_0|clk_50hz_count[15] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.674      ;
+; -0.632 ; clk_generator:clk_generator_0|clk_50hz_count[4]  ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_50megahz ; clk_50megahz ; 1.000        ; -0.005     ; 1.659      ;
+; -0.631 ; clk_generator:clk_generator_0|clk_50hz_count[2]  ; clk_generator:clk_generator_0|clk_50hz_count[27] ; clk_50megahz ; clk_50megahz ; 1.000        ; -0.005     ; 1.658      ;
+; -0.630 ; clk_generator:clk_generator_0|clk_50hz_count[1]  ; clk_generator:clk_generator_0|clk_50hz_count[26] ; clk_50megahz ; clk_50megahz ; 1.000        ; -0.005     ; 1.657      ;
+; -0.626 ; clk_generator:clk_generator_0|clk_50hz_count[0]  ; clk_generator:clk_generator_0|clk_50hz_count[25] ; clk_50megahz ; clk_50megahz ; 1.000        ; -0.005     ; 1.653      ;
+; -0.616 ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_generator:clk_generator_0|clk_50hz_count[0]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.653      ;
+; -0.616 ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_generator:clk_generator_0|clk_50hz_count[1]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.653      ;
+; -0.616 ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_generator:clk_generator_0|clk_50hz_count[2]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.653      ;
+; -0.616 ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_generator:clk_generator_0|clk_50hz_count[3]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.653      ;
+; -0.616 ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_generator:clk_generator_0|clk_50hz_count[4]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.653      ;
+; -0.616 ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_generator:clk_generator_0|clk_50hz_count[5]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.653      ;
+; -0.616 ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_generator:clk_generator_0|clk_50hz_count[6]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.653      ;
+; -0.616 ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_generator:clk_generator_0|clk_50hz_count[7]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.653      ;
+; -0.616 ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_generator:clk_generator_0|clk_50hz_count[8]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.653      ;
+; -0.616 ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.653      ;
+; -0.616 ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_generator:clk_generator_0|clk_50hz_count[10] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.653      ;
+; -0.616 ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_generator:clk_generator_0|clk_50hz_count[11] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.653      ;
+; -0.616 ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_generator:clk_generator_0|clk_50hz_count[12] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.653      ;
+; -0.616 ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_generator:clk_generator_0|clk_50hz_count[13] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.653      ;
+; -0.616 ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_generator:clk_generator_0|clk_50hz_count[14] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.653      ;
+; -0.616 ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_generator:clk_generator_0|clk_50hz_count[15] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.653      ;
+; -0.614 ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_generator:clk_generator_0|clk_50hz_count[0]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.000      ; 1.646      ;
+; -0.614 ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_generator:clk_generator_0|clk_50hz_count[1]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.000      ; 1.646      ;
+; -0.614 ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_generator:clk_generator_0|clk_50hz_count[2]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.000      ; 1.646      ;
+; -0.614 ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_generator:clk_generator_0|clk_50hz_count[3]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.000      ; 1.646      ;
+; -0.614 ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_generator:clk_generator_0|clk_50hz_count[4]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.000      ; 1.646      ;
+; -0.614 ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_generator:clk_generator_0|clk_50hz_count[5]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.000      ; 1.646      ;
+; -0.614 ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_generator:clk_generator_0|clk_50hz_count[6]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.000      ; 1.646      ;
+; -0.614 ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_generator:clk_generator_0|clk_50hz_count[7]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.000      ; 1.646      ;
+; -0.614 ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_generator:clk_generator_0|clk_50hz_count[8]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.000      ; 1.646      ;
+; -0.614 ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.000      ; 1.646      ;
+; -0.614 ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_generator:clk_generator_0|clk_50hz_count[10] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.000      ; 1.646      ;
+; -0.614 ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_generator:clk_generator_0|clk_50hz_count[11] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.000      ; 1.646      ;
+; -0.614 ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_generator:clk_generator_0|clk_50hz_count[12] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.000      ; 1.646      ;
+; -0.614 ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_generator:clk_generator_0|clk_50hz_count[13] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.000      ; 1.646      ;
+; -0.614 ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_generator:clk_generator_0|clk_50hz_count[14] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.000      ; 1.646      ;
+; -0.614 ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_generator:clk_generator_0|clk_50hz_count[15] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.000      ; 1.646      ;
+; -0.612 ; clk_generator:clk_generator_0|clk_50hz_count[6]  ; clk_generator:clk_generator_0|clk_50hz_count[30] ; clk_50megahz ; clk_50megahz ; 1.000        ; -0.005     ; 1.639      ;
+; -0.611 ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_generator:clk_generator_0|clk_50hz_count[0]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.648      ;
+; -0.611 ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_generator:clk_generator_0|clk_50hz_count[1]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.648      ;
+; -0.611 ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_generator:clk_generator_0|clk_50hz_count[2]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.648      ;
+; -0.611 ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_generator:clk_generator_0|clk_50hz_count[3]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.648      ;
+; -0.611 ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_generator:clk_generator_0|clk_50hz_count[4]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.648      ;
+; -0.611 ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_generator:clk_generator_0|clk_50hz_count[5]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.648      ;
+; -0.611 ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_generator:clk_generator_0|clk_50hz_count[6]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.648      ;
+; -0.611 ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_generator:clk_generator_0|clk_50hz_count[7]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.648      ;
+; -0.611 ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_generator:clk_generator_0|clk_50hz_count[8]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.648      ;
+; -0.611 ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.648      ;
+; -0.611 ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_generator:clk_generator_0|clk_50hz_count[10] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.648      ;
+; -0.611 ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_generator:clk_generator_0|clk_50hz_count[11] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.648      ;
+; -0.611 ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_generator:clk_generator_0|clk_50hz_count[12] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.648      ;
+; -0.611 ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_generator:clk_generator_0|clk_50hz_count[13] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.648      ;
+; -0.611 ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_generator:clk_generator_0|clk_50hz_count[14] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.648      ;
+; -0.611 ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_generator:clk_generator_0|clk_50hz_count[15] ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.648      ;
+; -0.610 ; clk_generator:clk_generator_0|clk_50hz_count[5]  ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_50megahz ; clk_50megahz ; 1.000        ; -0.005     ; 1.637      ;
+; -0.609 ; clk_generator:clk_generator_0|clk_50hz_count[3]  ; clk_generator:clk_generator_0|clk_50hz_count[27] ; clk_50megahz ; clk_50megahz ; 1.000        ; -0.005     ; 1.636      ;
+; -0.601 ; clk_generator:clk_generator_0|clk_50hz_count[19] ; clk_generator:clk_generator_0|clk_50hz_count[0]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.638      ;
+; -0.601 ; clk_generator:clk_generator_0|clk_50hz_count[19] ; clk_generator:clk_generator_0|clk_50hz_count[1]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.638      ;
+; -0.601 ; clk_generator:clk_generator_0|clk_50hz_count[19] ; clk_generator:clk_generator_0|clk_50hz_count[2]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.638      ;
+; -0.601 ; clk_generator:clk_generator_0|clk_50hz_count[19] ; clk_generator:clk_generator_0|clk_50hz_count[3]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.638      ;
+; -0.601 ; clk_generator:clk_generator_0|clk_50hz_count[19] ; clk_generator:clk_generator_0|clk_50hz_count[4]  ; clk_50megahz ; clk_50megahz ; 1.000        ; 0.005      ; 1.638      ;
++--------+--------------------------------------------------+--------------------------------------------------+--------------+--------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk_50megahz'                                                                                                                                                                               ;
++--------+--------------------------------------------------+--------------------------------------------------+----------------------------------------+--------------+--------------+------------+------------+
+; Slack  ; From Node                                        ; To Node                                          ; Launch Clock                           ; Latch Clock  ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------------------+--------------------------------------------------+----------------------------------------+--------------+--------------+------------+------------+
+; -1.568 ; clk_generator:clk_generator_0|clk_50hz           ; clk_generator:clk_generator_0|clk_50hz           ; clk_generator:clk_generator_0|clk_50hz ; clk_50megahz ; 0.000        ; 1.642      ; 0.367      ;
+; -1.068 ; clk_generator:clk_generator_0|clk_50hz           ; clk_generator:clk_generator_0|clk_50hz           ; clk_generator:clk_generator_0|clk_50hz ; clk_50megahz ; -0.500       ; 1.642      ; 0.367      ;
+; 0.243  ; clk_generator:clk_generator_0|clk_50hz_count[31] ; clk_generator:clk_generator_0|clk_50hz_count[31] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.395      ;
+; 0.353  ; clk_generator:clk_generator_0|clk_50hz_count[0]  ; clk_generator:clk_generator_0|clk_50hz_count[0]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.505      ;
+; 0.355  ; clk_generator:clk_generator_0|clk_50hz_count[16] ; clk_generator:clk_generator_0|clk_50hz_count[16] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.507      ;
+; 0.357  ; clk_generator:clk_generator_0|clk_50hz_count[1]  ; clk_generator:clk_generator_0|clk_50hz_count[1]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.509      ;
+; 0.358  ; clk_generator:clk_generator_0|clk_50hz_count[2]  ; clk_generator:clk_generator_0|clk_50hz_count[2]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.510      ;
+; 0.359  ; clk_generator:clk_generator_0|clk_50hz_count[4]  ; clk_generator:clk_generator_0|clk_50hz_count[4]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.511      ;
+; 0.359  ; clk_generator:clk_generator_0|clk_50hz_count[17] ; clk_generator:clk_generator_0|clk_50hz_count[17] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.511      ;
+; 0.360  ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360  ; clk_generator:clk_generator_0|clk_50hz_count[11] ; clk_generator:clk_generator_0|clk_50hz_count[11] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360  ; clk_generator:clk_generator_0|clk_50hz_count[18] ; clk_generator:clk_generator_0|clk_50hz_count[18] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360  ; clk_generator:clk_generator_0|clk_50hz_count[25] ; clk_generator:clk_generator_0|clk_50hz_count[25] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360  ; clk_generator:clk_generator_0|clk_50hz_count[27] ; clk_generator:clk_generator_0|clk_50hz_count[27] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.512      ;
+; 0.361  ; clk_generator:clk_generator_0|clk_50hz_count[7]  ; clk_generator:clk_generator_0|clk_50hz_count[7]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361  ; clk_generator:clk_generator_0|clk_50hz_count[13] ; clk_generator:clk_generator_0|clk_50hz_count[13] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361  ; clk_generator:clk_generator_0|clk_50hz_count[14] ; clk_generator:clk_generator_0|clk_50hz_count[14] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361  ; clk_generator:clk_generator_0|clk_50hz_count[20] ; clk_generator:clk_generator_0|clk_50hz_count[20] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361  ; clk_generator:clk_generator_0|clk_50hz_count[23] ; clk_generator:clk_generator_0|clk_50hz_count[23] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361  ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361  ; clk_generator:clk_generator_0|clk_50hz_count[30] ; clk_generator:clk_generator_0|clk_50hz_count[30] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.513      ;
+; 0.364  ; clk_generator:clk_generator_0|clk_50hz_count[15] ; clk_generator:clk_generator_0|clk_50hz_count[15] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.516      ;
+; 0.369  ; clk_generator:clk_generator_0|clk_50hz_count[3]  ; clk_generator:clk_generator_0|clk_50hz_count[3]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.521      ;
+; 0.370  ; clk_generator:clk_generator_0|clk_50hz_count[5]  ; clk_generator:clk_generator_0|clk_50hz_count[5]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.522      ;
+; 0.371  ; clk_generator:clk_generator_0|clk_50hz_count[8]  ; clk_generator:clk_generator_0|clk_50hz_count[8]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.523      ;
+; 0.371  ; clk_generator:clk_generator_0|clk_50hz_count[10] ; clk_generator:clk_generator_0|clk_50hz_count[10] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.523      ;
+; 0.371  ; clk_generator:clk_generator_0|clk_50hz_count[19] ; clk_generator:clk_generator_0|clk_50hz_count[19] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.523      ;
+; 0.371  ; clk_generator:clk_generator_0|clk_50hz_count[24] ; clk_generator:clk_generator_0|clk_50hz_count[24] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.523      ;
+; 0.371  ; clk_generator:clk_generator_0|clk_50hz_count[26] ; clk_generator:clk_generator_0|clk_50hz_count[26] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.523      ;
+; 0.372  ; clk_generator:clk_generator_0|clk_50hz_count[6]  ; clk_generator:clk_generator_0|clk_50hz_count[6]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372  ; clk_generator:clk_generator_0|clk_50hz_count[12] ; clk_generator:clk_generator_0|clk_50hz_count[12] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372  ; clk_generator:clk_generator_0|clk_50hz_count[21] ; clk_generator:clk_generator_0|clk_50hz_count[21] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372  ; clk_generator:clk_generator_0|clk_50hz_count[22] ; clk_generator:clk_generator_0|clk_50hz_count[22] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372  ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.524      ;
+; 0.434  ; clk_generator:clk_generator_0|clk_50hz_count[15] ; clk_generator:clk_generator_0|clk_50hz           ; clk_50megahz                           ; clk_50megahz ; 0.000        ; -0.002     ; 0.584      ;
+; 0.491  ; clk_generator:clk_generator_0|clk_50hz_count[0]  ; clk_generator:clk_generator_0|clk_50hz_count[1]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.643      ;
+; 0.493  ; clk_generator:clk_generator_0|clk_50hz_count[16] ; clk_generator:clk_generator_0|clk_50hz_count[17] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.645      ;
+; 0.495  ; clk_generator:clk_generator_0|clk_50hz_count[1]  ; clk_generator:clk_generator_0|clk_50hz_count[2]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.647      ;
+; 0.496  ; clk_generator:clk_generator_0|clk_50hz_count[2]  ; clk_generator:clk_generator_0|clk_50hz_count[3]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.648      ;
+; 0.497  ; clk_generator:clk_generator_0|clk_50hz_count[17] ; clk_generator:clk_generator_0|clk_50hz_count[18] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.649      ;
+; 0.497  ; clk_generator:clk_generator_0|clk_50hz_count[4]  ; clk_generator:clk_generator_0|clk_50hz_count[5]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.649      ;
+; 0.498  ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_generator:clk_generator_0|clk_50hz_count[10] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.650      ;
+; 0.498  ; clk_generator:clk_generator_0|clk_50hz_count[18] ; clk_generator:clk_generator_0|clk_50hz_count[19] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.650      ;
+; 0.498  ; clk_generator:clk_generator_0|clk_50hz_count[25] ; clk_generator:clk_generator_0|clk_50hz_count[26] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.650      ;
+; 0.498  ; clk_generator:clk_generator_0|clk_50hz_count[11] ; clk_generator:clk_generator_0|clk_50hz_count[12] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.650      ;
+; 0.498  ; clk_generator:clk_generator_0|clk_50hz_count[27] ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.650      ;
+; 0.499  ; clk_generator:clk_generator_0|clk_50hz_count[30] ; clk_generator:clk_generator_0|clk_50hz_count[31] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.651      ;
+; 0.499  ; clk_generator:clk_generator_0|clk_50hz_count[13] ; clk_generator:clk_generator_0|clk_50hz_count[14] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.651      ;
+; 0.499  ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_generator:clk_generator_0|clk_50hz_count[30] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.651      ;
+; 0.499  ; clk_generator:clk_generator_0|clk_50hz_count[14] ; clk_generator:clk_generator_0|clk_50hz_count[15] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.651      ;
+; 0.499  ; clk_generator:clk_generator_0|clk_50hz_count[20] ; clk_generator:clk_generator_0|clk_50hz_count[21] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.651      ;
+; 0.509  ; clk_generator:clk_generator_0|clk_50hz_count[3]  ; clk_generator:clk_generator_0|clk_50hz_count[4]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.661      ;
+; 0.510  ; clk_generator:clk_generator_0|clk_50hz_count[5]  ; clk_generator:clk_generator_0|clk_50hz_count[6]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.662      ;
+; 0.511  ; clk_generator:clk_generator_0|clk_50hz_count[8]  ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.663      ;
+; 0.511  ; clk_generator:clk_generator_0|clk_50hz_count[10] ; clk_generator:clk_generator_0|clk_50hz_count[11] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.663      ;
+; 0.511  ; clk_generator:clk_generator_0|clk_50hz_count[24] ; clk_generator:clk_generator_0|clk_50hz_count[25] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.663      ;
+; 0.511  ; clk_generator:clk_generator_0|clk_50hz_count[26] ; clk_generator:clk_generator_0|clk_50hz_count[27] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.663      ;
+; 0.511  ; clk_generator:clk_generator_0|clk_50hz_count[19] ; clk_generator:clk_generator_0|clk_50hz_count[20] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.663      ;
+; 0.512  ; clk_generator:clk_generator_0|clk_50hz_count[6]  ; clk_generator:clk_generator_0|clk_50hz_count[7]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.664      ;
+; 0.512  ; clk_generator:clk_generator_0|clk_50hz_count[12] ; clk_generator:clk_generator_0|clk_50hz_count[13] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.664      ;
+; 0.512  ; clk_generator:clk_generator_0|clk_50hz_count[22] ; clk_generator:clk_generator_0|clk_50hz_count[23] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.664      ;
+; 0.512  ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.664      ;
+; 0.512  ; clk_generator:clk_generator_0|clk_50hz_count[21] ; clk_generator:clk_generator_0|clk_50hz_count[22] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.664      ;
+; 0.526  ; clk_generator:clk_generator_0|clk_50hz_count[0]  ; clk_generator:clk_generator_0|clk_50hz_count[2]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.678      ;
+; 0.528  ; clk_generator:clk_generator_0|clk_50hz_count[16] ; clk_generator:clk_generator_0|clk_50hz_count[18] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.680      ;
+; 0.530  ; clk_generator:clk_generator_0|clk_50hz_count[1]  ; clk_generator:clk_generator_0|clk_50hz_count[3]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.682      ;
+; 0.531  ; clk_generator:clk_generator_0|clk_50hz_count[2]  ; clk_generator:clk_generator_0|clk_50hz_count[4]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.683      ;
+; 0.532  ; clk_generator:clk_generator_0|clk_50hz_count[17] ; clk_generator:clk_generator_0|clk_50hz_count[19] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.684      ;
+; 0.532  ; clk_generator:clk_generator_0|clk_50hz_count[4]  ; clk_generator:clk_generator_0|clk_50hz_count[6]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.684      ;
+; 0.533  ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_generator:clk_generator_0|clk_50hz_count[11] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.685      ;
+; 0.533  ; clk_generator:clk_generator_0|clk_50hz_count[25] ; clk_generator:clk_generator_0|clk_50hz_count[27] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.685      ;
+; 0.533  ; clk_generator:clk_generator_0|clk_50hz_count[18] ; clk_generator:clk_generator_0|clk_50hz_count[20] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.685      ;
+; 0.533  ; clk_generator:clk_generator_0|clk_50hz_count[11] ; clk_generator:clk_generator_0|clk_50hz_count[13] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.685      ;
+; 0.533  ; clk_generator:clk_generator_0|clk_50hz_count[27] ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.685      ;
+; 0.534  ; clk_generator:clk_generator_0|clk_50hz_count[29] ; clk_generator:clk_generator_0|clk_50hz_count[31] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.686      ;
+; 0.534  ; clk_generator:clk_generator_0|clk_50hz_count[13] ; clk_generator:clk_generator_0|clk_50hz_count[15] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.686      ;
+; 0.534  ; clk_generator:clk_generator_0|clk_50hz_count[20] ; clk_generator:clk_generator_0|clk_50hz_count[22] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.686      ;
+; 0.544  ; clk_generator:clk_generator_0|clk_50hz_count[3]  ; clk_generator:clk_generator_0|clk_50hz_count[5]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.696      ;
+; 0.545  ; clk_generator:clk_generator_0|clk_50hz_count[5]  ; clk_generator:clk_generator_0|clk_50hz_count[7]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.697      ;
+; 0.546  ; clk_generator:clk_generator_0|clk_50hz_count[8]  ; clk_generator:clk_generator_0|clk_50hz_count[10] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.698      ;
+; 0.546  ; clk_generator:clk_generator_0|clk_50hz_count[24] ; clk_generator:clk_generator_0|clk_50hz_count[26] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.698      ;
+; 0.546  ; clk_generator:clk_generator_0|clk_50hz_count[10] ; clk_generator:clk_generator_0|clk_50hz_count[12] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.698      ;
+; 0.546  ; clk_generator:clk_generator_0|clk_50hz_count[26] ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.698      ;
+; 0.546  ; clk_generator:clk_generator_0|clk_50hz_count[19] ; clk_generator:clk_generator_0|clk_50hz_count[21] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.698      ;
+; 0.547  ; clk_generator:clk_generator_0|clk_50hz_count[12] ; clk_generator:clk_generator_0|clk_50hz_count[14] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.699      ;
+; 0.547  ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_generator:clk_generator_0|clk_50hz_count[30] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.699      ;
+; 0.547  ; clk_generator:clk_generator_0|clk_50hz_count[21] ; clk_generator:clk_generator_0|clk_50hz_count[23] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.699      ;
+; 0.554  ; clk_generator:clk_generator_0|clk_50hz_count[15] ; clk_generator:clk_generator_0|clk_50hz_count[16] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; -0.005     ; 0.701      ;
+; 0.554  ; clk_generator:clk_generator_0|clk_50hz_count[7]  ; clk_generator:clk_generator_0|clk_50hz_count[8]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.706      ;
+; 0.554  ; clk_generator:clk_generator_0|clk_50hz_count[23] ; clk_generator:clk_generator_0|clk_50hz_count[24] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.706      ;
+; 0.561  ; clk_generator:clk_generator_0|clk_50hz_count[0]  ; clk_generator:clk_generator_0|clk_50hz_count[3]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.713      ;
+; 0.563  ; clk_generator:clk_generator_0|clk_50hz_count[16] ; clk_generator:clk_generator_0|clk_50hz_count[19] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.715      ;
+; 0.565  ; clk_generator:clk_generator_0|clk_50hz_count[1]  ; clk_generator:clk_generator_0|clk_50hz_count[4]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.717      ;
+; 0.566  ; clk_generator:clk_generator_0|clk_50hz_count[2]  ; clk_generator:clk_generator_0|clk_50hz_count[5]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.718      ;
+; 0.567  ; clk_generator:clk_generator_0|clk_50hz_count[17] ; clk_generator:clk_generator_0|clk_50hz_count[20] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.719      ;
+; 0.567  ; clk_generator:clk_generator_0|clk_50hz_count[4]  ; clk_generator:clk_generator_0|clk_50hz_count[7]  ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.719      ;
+; 0.568  ; clk_generator:clk_generator_0|clk_50hz_count[9]  ; clk_generator:clk_generator_0|clk_50hz_count[12] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.720      ;
+; 0.568  ; clk_generator:clk_generator_0|clk_50hz_count[25] ; clk_generator:clk_generator_0|clk_50hz_count[28] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.720      ;
+; 0.568  ; clk_generator:clk_generator_0|clk_50hz_count[18] ; clk_generator:clk_generator_0|clk_50hz_count[21] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.720      ;
+; 0.568  ; clk_generator:clk_generator_0|clk_50hz_count[11] ; clk_generator:clk_generator_0|clk_50hz_count[14] ; clk_50megahz                           ; clk_50megahz ; 0.000        ; 0.000      ; 0.720      ;
++--------+--------------------------------------------------+--------------------------------------------------+----------------------------------------+--------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk_50megahz'                                                                                           ;
++--------+--------------+----------------+------------------+--------------+------------+--------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock        ; Clock Edge ; Target                                           ;
++--------+--------------+----------------+------------------+--------------+------------+--------------------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk_50megahz ; Rise       ; clk_50megahz                                     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[10] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[10] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[11] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[11] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[12] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[12] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[13] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[13] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[14] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[14] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[15] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[15] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[16] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[16] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[17] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[17] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[18] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[18] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[19] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[19] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[20] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[20] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[21] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[21] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[22] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[22] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[23] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[23] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[24] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[24] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[25] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[25] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[26] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[26] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[27] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[27] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[28] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[28] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[29] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[29] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[30] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[30] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[31] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[31] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator:clk_generator_0|clk_50hz_count[9]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_50megahz|combout                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_50megahz|combout                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_50megahz~clkctrl|inclk[0]                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_50megahz~clkctrl|inclk[0]                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_50megahz~clkctrl|outclk                      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_50megahz~clkctrl|outclk                      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[0]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[0]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[10]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[10]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[11]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[11]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[12]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[12]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[13]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[13]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[14]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[14]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[15]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[15]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[16]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[16]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[17]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[17]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[18]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[18]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[19]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[19]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[1]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[1]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[20]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[20]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50megahz ; Rise       ; clk_generator_0|clk_50hz_count[21]|clk           ;
++--------+--------------+----------------+------------------+--------------+------------+--------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk_generator:clk_generator_0|clk_50hz'                                                                                    ;
++--------+--------------+----------------+------------------+----------------------------------------+------------+-------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock                                  ; Clock Edge ; Target                                    ;
++--------+--------------+----------------+------------------+----------------------------------------+------------+-------------------------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg:temp_reg_0|reg_a[0]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg:temp_reg_0|reg_a[0]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg:temp_reg_0|reg_a[1]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg:temp_reg_0|reg_a[1]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg:temp_reg_0|reg_a[2]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg:temp_reg_0|reg_a[2]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg:temp_reg_0|reg_a[3]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg:temp_reg_0|reg_a[3]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg:temp_reg_0|reg_b[0]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg:temp_reg_0|reg_b[0]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg:temp_reg_0|reg_b[1]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg:temp_reg_0|reg_b[1]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg:temp_reg_0|reg_b[2]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg:temp_reg_0|reg_b[2]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg:temp_reg_0|reg_b[3]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg:temp_reg_0|reg_b[3]              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; clk_generator_0|clk_50hz|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; clk_generator_0|clk_50hz|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; clk_generator_0|clk_50hz~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; clk_generator_0|clk_50hz~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; clk_generator_0|clk_50hz~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; clk_generator_0|clk_50hz~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg_0|reg_a[0]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg_0|reg_a[0]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg_0|reg_a[1]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg_0|reg_a[1]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg_0|reg_a[2]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg_0|reg_a[2]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg_0|reg_a[3]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg_0|reg_a[3]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg_0|reg_b[0]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg_0|reg_b[0]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg_0|reg_b[1]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg_0|reg_b[1]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg_0|reg_b[2]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg_0|reg_b[2]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg_0|reg_b[3]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_generator:clk_generator_0|clk_50hz ; Rise       ; temp_reg_0|reg_b[3]|clk                   ;
++--------+--------------+----------------+------------------+----------------------------------------+------------+-------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Setup Times                                                                                                                ;
++-----------+----------------------------------------+--------+--------+------------+----------------------------------------+
+; Data Port ; Clock Port                             ; Rise   ; Fall   ; Clock Edge ; Clock Reference                        ;
++-----------+----------------------------------------+--------+--------+------------+----------------------------------------+
+; rst       ; clk_generator:clk_generator_0|clk_50hz ; 0.276  ; 0.276  ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+; sw_a[*]   ; clk_generator:clk_generator_0|clk_50hz ; 2.040  ; 2.040  ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  sw_a[0]  ; clk_generator:clk_generator_0|clk_50hz ; -0.521 ; -0.521 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  sw_a[1]  ; clk_generator:clk_generator_0|clk_50hz ; 2.040  ; 2.040  ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  sw_a[2]  ; clk_generator:clk_generator_0|clk_50hz ; 1.953  ; 1.953  ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  sw_a[3]  ; clk_generator:clk_generator_0|clk_50hz ; 2.035  ; 2.035  ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+; sw_b[*]   ; clk_generator:clk_generator_0|clk_50hz ; 1.910  ; 1.910  ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  sw_b[0]  ; clk_generator:clk_generator_0|clk_50hz ; 1.891  ; 1.891  ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  sw_b[1]  ; clk_generator:clk_generator_0|clk_50hz ; 1.869  ; 1.869  ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  sw_b[2]  ; clk_generator:clk_generator_0|clk_50hz ; 1.833  ; 1.833  ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  sw_b[3]  ; clk_generator:clk_generator_0|clk_50hz ; 1.910  ; 1.910  ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
++-----------+----------------------------------------+--------+--------+------------+----------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Hold Times                                                                                                                 ;
++-----------+----------------------------------------+--------+--------+------------+----------------------------------------+
+; Data Port ; Clock Port                             ; Rise   ; Fall   ; Clock Edge ; Clock Reference                        ;
++-----------+----------------------------------------+--------+--------+------------+----------------------------------------+
+; rst       ; clk_generator:clk_generator_0|clk_50hz ; 0.051  ; 0.051  ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+; sw_a[*]   ; clk_generator:clk_generator_0|clk_50hz ; 0.641  ; 0.641  ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  sw_a[0]  ; clk_generator:clk_generator_0|clk_50hz ; 0.641  ; 0.641  ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  sw_a[1]  ; clk_generator:clk_generator_0|clk_50hz ; -1.920 ; -1.920 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  sw_a[2]  ; clk_generator:clk_generator_0|clk_50hz ; -1.833 ; -1.833 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  sw_a[3]  ; clk_generator:clk_generator_0|clk_50hz ; -1.915 ; -1.915 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+; sw_b[*]   ; clk_generator:clk_generator_0|clk_50hz ; -1.713 ; -1.713 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  sw_b[0]  ; clk_generator:clk_generator_0|clk_50hz ; -1.771 ; -1.771 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  sw_b[1]  ; clk_generator:clk_generator_0|clk_50hz ; -1.749 ; -1.749 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  sw_b[2]  ; clk_generator:clk_generator_0|clk_50hz ; -1.713 ; -1.713 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  sw_b[3]  ; clk_generator:clk_generator_0|clk_50hz ; -1.790 ; -1.790 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
++-----------+----------------------------------------+--------+--------+------------+----------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                                           ;
++------------------+----------------------------------------+-------+-------+------------+----------------------------------------+
+; Data Port        ; Clock Port                             ; Rise  ; Fall  ; Clock Edge ; Clock Reference                        ;
++------------------+----------------------------------------+-------+-------+------------+----------------------------------------+
+; segment_a[0][*]  ; clk_generator:clk_generator_0|clk_50hz ; 4.080 ; 4.080 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[0][1] ; clk_generator:clk_generator_0|clk_50hz ; 3.896 ; 3.896 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[0][2] ; clk_generator:clk_generator_0|clk_50hz ; 4.063 ; 4.063 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[0][3] ; clk_generator:clk_generator_0|clk_50hz ; 4.063 ; 4.063 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[0][4] ; clk_generator:clk_generator_0|clk_50hz ; 3.837 ; 3.837 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[0][5] ; clk_generator:clk_generator_0|clk_50hz ; 4.080 ; 4.080 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[0][6] ; clk_generator:clk_generator_0|clk_50hz ; 3.959 ; 3.959 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+; segment_a[1][*]  ; clk_generator:clk_generator_0|clk_50hz ; 4.003 ; 4.003 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[1][0] ; clk_generator:clk_generator_0|clk_50hz ; 3.877 ; 3.877 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[1][1] ; clk_generator:clk_generator_0|clk_50hz ; 3.969 ; 3.969 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[1][2] ; clk_generator:clk_generator_0|clk_50hz ; 3.977 ; 3.977 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[1][3] ; clk_generator:clk_generator_0|clk_50hz ; 3.905 ; 3.905 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[1][4] ; clk_generator:clk_generator_0|clk_50hz ; 4.003 ; 4.003 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[1][5] ; clk_generator:clk_generator_0|clk_50hz ; 3.848 ; 3.848 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[1][6] ; clk_generator:clk_generator_0|clk_50hz ; 3.878 ; 3.878 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+; segment_b[0][*]  ; clk_generator:clk_generator_0|clk_50hz ; 3.940 ; 3.940 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[0][1] ; clk_generator:clk_generator_0|clk_50hz ; 3.687 ; 3.687 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[0][2] ; clk_generator:clk_generator_0|clk_50hz ; 3.812 ; 3.812 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[0][3] ; clk_generator:clk_generator_0|clk_50hz ; 3.842 ; 3.842 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[0][4] ; clk_generator:clk_generator_0|clk_50hz ; 3.802 ; 3.802 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[0][5] ; clk_generator:clk_generator_0|clk_50hz ; 3.784 ; 3.784 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[0][6] ; clk_generator:clk_generator_0|clk_50hz ; 3.940 ; 3.940 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+; segment_b[1][*]  ; clk_generator:clk_generator_0|clk_50hz ; 3.841 ; 3.841 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[1][0] ; clk_generator:clk_generator_0|clk_50hz ; 3.713 ; 3.713 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[1][1] ; clk_generator:clk_generator_0|clk_50hz ; 3.841 ; 3.841 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[1][2] ; clk_generator:clk_generator_0|clk_50hz ; 3.806 ; 3.806 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[1][3] ; clk_generator:clk_generator_0|clk_50hz ; 3.699 ; 3.699 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[1][4] ; clk_generator:clk_generator_0|clk_50hz ; 3.716 ; 3.716 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[1][5] ; clk_generator:clk_generator_0|clk_50hz ; 3.781 ; 3.781 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[1][6] ; clk_generator:clk_generator_0|clk_50hz ; 3.699 ; 3.699 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
++------------------+----------------------------------------+-------+-------+------------+----------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                                                   ;
++------------------+----------------------------------------+-------+-------+------------+----------------------------------------+
+; Data Port        ; Clock Port                             ; Rise  ; Fall  ; Clock Edge ; Clock Reference                        ;
++------------------+----------------------------------------+-------+-------+------------+----------------------------------------+
+; segment_a[0][*]  ; clk_generator:clk_generator_0|clk_50hz ; 3.722 ; 3.722 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[0][1] ; clk_generator:clk_generator_0|clk_50hz ; 3.774 ; 3.774 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[0][2] ; clk_generator:clk_generator_0|clk_50hz ; 3.961 ; 3.961 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[0][3] ; clk_generator:clk_generator_0|clk_50hz ; 3.961 ; 3.961 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[0][4] ; clk_generator:clk_generator_0|clk_50hz ; 3.722 ; 3.722 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[0][5] ; clk_generator:clk_generator_0|clk_50hz ; 3.963 ; 3.963 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[0][6] ; clk_generator:clk_generator_0|clk_50hz ; 3.842 ; 3.842 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+; segment_a[1][*]  ; clk_generator:clk_generator_0|clk_50hz ; 3.724 ; 3.724 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[1][0] ; clk_generator:clk_generator_0|clk_50hz ; 3.753 ; 3.753 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[1][1] ; clk_generator:clk_generator_0|clk_50hz ; 3.857 ; 3.857 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[1][2] ; clk_generator:clk_generator_0|clk_50hz ; 3.858 ; 3.858 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[1][3] ; clk_generator:clk_generator_0|clk_50hz ; 3.786 ; 3.786 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[1][4] ; clk_generator:clk_generator_0|clk_50hz ; 3.888 ; 3.888 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[1][5] ; clk_generator:clk_generator_0|clk_50hz ; 3.724 ; 3.724 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[1][6] ; clk_generator:clk_generator_0|clk_50hz ; 3.761 ; 3.761 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+; segment_b[0][*]  ; clk_generator:clk_generator_0|clk_50hz ; 3.553 ; 3.553 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[0][1] ; clk_generator:clk_generator_0|clk_50hz ; 3.553 ; 3.553 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[0][2] ; clk_generator:clk_generator_0|clk_50hz ; 3.709 ; 3.709 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[0][3] ; clk_generator:clk_generator_0|clk_50hz ; 3.739 ; 3.739 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[0][4] ; clk_generator:clk_generator_0|clk_50hz ; 3.674 ; 3.674 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[0][5] ; clk_generator:clk_generator_0|clk_50hz ; 3.656 ; 3.656 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[0][6] ; clk_generator:clk_generator_0|clk_50hz ; 3.799 ; 3.799 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+; segment_b[1][*]  ; clk_generator:clk_generator_0|clk_50hz ; 3.565 ; 3.565 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[1][0] ; clk_generator:clk_generator_0|clk_50hz ; 3.583 ; 3.583 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[1][1] ; clk_generator:clk_generator_0|clk_50hz ; 3.717 ; 3.717 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[1][2] ; clk_generator:clk_generator_0|clk_50hz ; 3.672 ; 3.672 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[1][3] ; clk_generator:clk_generator_0|clk_50hz ; 3.565 ; 3.565 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[1][4] ; clk_generator:clk_generator_0|clk_50hz ; 3.582 ; 3.582 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[1][5] ; clk_generator:clk_generator_0|clk_50hz ; 3.658 ; 3.658 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[1][6] ; clk_generator:clk_generator_0|clk_50hz ; 3.565 ; 3.565 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
++------------------+----------------------------------------+-------+-------+------------+----------------------------------------+
+
+
++-------------------------------------------------------+
+; Propagation Delay                                     ;
++------------+----------------+-------+----+----+-------+
+; Input Port ; Output Port    ; RR    ; RF ; FR ; FF    ;
++------------+----------------+-------+----+----+-------+
+; sw_a[0]    ; sw_a_led[0]    ; 2.537 ;    ;    ; 2.537 ;
+; sw_a[1]    ; sw_a_led[1]    ; 4.994 ;    ;    ; 4.994 ;
+; sw_a[2]    ; sw_a_led[2]    ; 4.995 ;    ;    ; 4.995 ;
+; sw_a[3]    ; sw_a_led[3]    ; 4.927 ;    ;    ; 4.927 ;
+; sw_b[0]    ; sw_b_led[0]    ; 4.762 ;    ;    ; 4.762 ;
+; sw_b[1]    ; sw_b_led[1]    ; 4.655 ;    ;    ; 4.655 ;
+; sw_b[2]    ; sw_b_led[2]    ; 4.643 ;    ;    ; 4.643 ;
+; sw_b[3]    ; sw_b_led[3]    ; 5.052 ;    ;    ; 5.052 ;
+; sw_mode[0] ; sw_mode_led[0] ; 4.572 ;    ;    ; 4.572 ;
+; sw_mode[1] ; sw_mode_led[1] ; 4.662 ;    ;    ; 4.662 ;
++------------+----------------+-------+----+----+-------+
+
+
++-------------------------------------------------------+
+; Minimum Propagation Delay                             ;
++------------+----------------+-------+----+----+-------+
+; Input Port ; Output Port    ; RR    ; RF ; FR ; FF    ;
++------------+----------------+-------+----+----+-------+
+; sw_a[0]    ; sw_a_led[0]    ; 2.537 ;    ;    ; 2.537 ;
+; sw_a[1]    ; sw_a_led[1]    ; 4.994 ;    ;    ; 4.994 ;
+; sw_a[2]    ; sw_a_led[2]    ; 4.995 ;    ;    ; 4.995 ;
+; sw_a[3]    ; sw_a_led[3]    ; 4.927 ;    ;    ; 4.927 ;
+; sw_b[0]    ; sw_b_led[0]    ; 4.762 ;    ;    ; 4.762 ;
+; sw_b[1]    ; sw_b_led[1]    ; 4.655 ;    ;    ; 4.655 ;
+; sw_b[2]    ; sw_b_led[2]    ; 4.643 ;    ;    ; 4.643 ;
+; sw_b[3]    ; sw_b_led[3]    ; 5.052 ;    ;    ; 5.052 ;
+; sw_mode[0] ; sw_mode_led[0] ; 4.572 ;    ;    ; 4.572 ;
+; sw_mode[1] ; sw_mode_led[1] ; 4.662 ;    ;    ; 4.662 ;
++------------+----------------+-------+----+----+-------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                                   ;
++-----------------------------------------+---------+--------+----------+---------+---------------------+
+; Clock                                   ; Setup   ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++-----------------------------------------+---------+--------+----------+---------+---------------------+
+; Worst-case Slack                        ; -2.787  ; -2.524 ; N/A      ; N/A     ; -1.380              ;
+;  clk_50megahz                           ; -2.787  ; -2.524 ; N/A      ; N/A     ; -1.380              ;
+;  clk_generator:clk_generator_0|clk_50hz ; N/A     ; N/A    ; N/A      ; N/A     ; -0.500              ;
+; Design-wide TNS                         ; -81.439 ; -2.524 ; 0.0      ; 0.0     ; -42.38              ;
+;  clk_50megahz                           ; -81.439 ; -2.524 ; N/A      ; N/A     ; -34.380             ;
+;  clk_generator:clk_generator_0|clk_50hz ; N/A     ; N/A    ; N/A      ; N/A     ; -8.000              ;
++-----------------------------------------+---------+--------+----------+---------+---------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Setup Times                                                                                                                ;
++-----------+----------------------------------------+--------+--------+------------+----------------------------------------+
+; Data Port ; Clock Port                             ; Rise   ; Fall   ; Clock Edge ; Clock Reference                        ;
++-----------+----------------------------------------+--------+--------+------------+----------------------------------------+
+; rst       ; clk_generator:clk_generator_0|clk_50hz ; 1.031  ; 1.031  ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+; sw_a[*]   ; clk_generator:clk_generator_0|clk_50hz ; 3.793  ; 3.793  ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  sw_a[0]  ; clk_generator:clk_generator_0|clk_50hz ; -0.472 ; -0.472 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  sw_a[1]  ; clk_generator:clk_generator_0|clk_50hz ; 3.793  ; 3.793  ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  sw_a[2]  ; clk_generator:clk_generator_0|clk_50hz ; 3.585  ; 3.585  ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  sw_a[3]  ; clk_generator:clk_generator_0|clk_50hz ; 3.790  ; 3.790  ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+; sw_b[*]   ; clk_generator:clk_generator_0|clk_50hz ; 3.410  ; 3.410  ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  sw_b[0]  ; clk_generator:clk_generator_0|clk_50hz ; 3.314  ; 3.314  ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  sw_b[1]  ; clk_generator:clk_generator_0|clk_50hz ; 3.322  ; 3.322  ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  sw_b[2]  ; clk_generator:clk_generator_0|clk_50hz ; 3.281  ; 3.281  ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  sw_b[3]  ; clk_generator:clk_generator_0|clk_50hz ; 3.410  ; 3.410  ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
++-----------+----------------------------------------+--------+--------+------------+----------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Hold Times                                                                                                                 ;
++-----------+----------------------------------------+--------+--------+------------+----------------------------------------+
+; Data Port ; Clock Port                             ; Rise   ; Fall   ; Clock Edge ; Clock Reference                        ;
++-----------+----------------------------------------+--------+--------+------------+----------------------------------------+
+; rst       ; clk_generator:clk_generator_0|clk_50hz ; 0.051  ; 0.051  ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+; sw_a[*]   ; clk_generator:clk_generator_0|clk_50hz ; 0.702  ; 0.702  ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  sw_a[0]  ; clk_generator:clk_generator_0|clk_50hz ; 0.702  ; 0.702  ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  sw_a[1]  ; clk_generator:clk_generator_0|clk_50hz ; -1.920 ; -1.920 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  sw_a[2]  ; clk_generator:clk_generator_0|clk_50hz ; -1.833 ; -1.833 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  sw_a[3]  ; clk_generator:clk_generator_0|clk_50hz ; -1.915 ; -1.915 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+; sw_b[*]   ; clk_generator:clk_generator_0|clk_50hz ; -1.713 ; -1.713 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  sw_b[0]  ; clk_generator:clk_generator_0|clk_50hz ; -1.771 ; -1.771 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  sw_b[1]  ; clk_generator:clk_generator_0|clk_50hz ; -1.749 ; -1.749 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  sw_b[2]  ; clk_generator:clk_generator_0|clk_50hz ; -1.713 ; -1.713 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  sw_b[3]  ; clk_generator:clk_generator_0|clk_50hz ; -1.790 ; -1.790 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
++-----------+----------------------------------------+--------+--------+------------+----------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                                           ;
++------------------+----------------------------------------+-------+-------+------------+----------------------------------------+
+; Data Port        ; Clock Port                             ; Rise  ; Fall  ; Clock Edge ; Clock Reference                        ;
++------------------+----------------------------------------+-------+-------+------------+----------------------------------------+
+; segment_a[0][*]  ; clk_generator:clk_generator_0|clk_50hz ; 7.426 ; 7.426 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[0][1] ; clk_generator:clk_generator_0|clk_50hz ; 7.008 ; 7.008 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[0][2] ; clk_generator:clk_generator_0|clk_50hz ; 7.426 ; 7.426 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[0][3] ; clk_generator:clk_generator_0|clk_50hz ; 7.426 ; 7.426 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[0][4] ; clk_generator:clk_generator_0|clk_50hz ; 6.943 ; 6.943 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[0][5] ; clk_generator:clk_generator_0|clk_50hz ; 7.425 ; 7.425 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[0][6] ; clk_generator:clk_generator_0|clk_50hz ; 7.188 ; 7.188 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+; segment_a[1][*]  ; clk_generator:clk_generator_0|clk_50hz ; 7.280 ; 7.280 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[1][0] ; clk_generator:clk_generator_0|clk_50hz ; 6.984 ; 6.984 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[1][1] ; clk_generator:clk_generator_0|clk_50hz ; 7.192 ; 7.192 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[1][2] ; clk_generator:clk_generator_0|clk_50hz ; 7.193 ; 7.193 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[1][3] ; clk_generator:clk_generator_0|clk_50hz ; 7.019 ; 7.019 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[1][4] ; clk_generator:clk_generator_0|clk_50hz ; 7.280 ; 7.280 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[1][5] ; clk_generator:clk_generator_0|clk_50hz ; 6.955 ; 6.955 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[1][6] ; clk_generator:clk_generator_0|clk_50hz ; 6.986 ; 6.986 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+; segment_b[0][*]  ; clk_generator:clk_generator_0|clk_50hz ; 7.156 ; 7.156 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[0][1] ; clk_generator:clk_generator_0|clk_50hz ; 6.715 ; 6.715 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[0][2] ; clk_generator:clk_generator_0|clk_50hz ; 6.997 ; 6.997 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[0][3] ; clk_generator:clk_generator_0|clk_50hz ; 7.027 ; 7.027 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[0][4] ; clk_generator:clk_generator_0|clk_50hz ; 6.984 ; 6.984 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[0][5] ; clk_generator:clk_generator_0|clk_50hz ; 6.940 ; 6.940 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[0][6] ; clk_generator:clk_generator_0|clk_50hz ; 7.156 ; 7.156 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+; segment_b[1][*]  ; clk_generator:clk_generator_0|clk_50hz ; 7.026 ; 7.026 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[1][0] ; clk_generator:clk_generator_0|clk_50hz ; 6.732 ; 6.732 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[1][1] ; clk_generator:clk_generator_0|clk_50hz ; 7.026 ; 7.026 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[1][2] ; clk_generator:clk_generator_0|clk_50hz ; 6.995 ; 6.995 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[1][3] ; clk_generator:clk_generator_0|clk_50hz ; 6.727 ; 6.727 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[1][4] ; clk_generator:clk_generator_0|clk_50hz ; 6.750 ; 6.750 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[1][5] ; clk_generator:clk_generator_0|clk_50hz ; 6.899 ; 6.899 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[1][6] ; clk_generator:clk_generator_0|clk_50hz ; 6.732 ; 6.732 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
++------------------+----------------------------------------+-------+-------+------------+----------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                                                   ;
++------------------+----------------------------------------+-------+-------+------------+----------------------------------------+
+; Data Port        ; Clock Port                             ; Rise  ; Fall  ; Clock Edge ; Clock Reference                        ;
++------------------+----------------------------------------+-------+-------+------------+----------------------------------------+
+; segment_a[0][*]  ; clk_generator:clk_generator_0|clk_50hz ; 3.722 ; 3.722 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[0][1] ; clk_generator:clk_generator_0|clk_50hz ; 3.774 ; 3.774 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[0][2] ; clk_generator:clk_generator_0|clk_50hz ; 3.961 ; 3.961 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[0][3] ; clk_generator:clk_generator_0|clk_50hz ; 3.961 ; 3.961 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[0][4] ; clk_generator:clk_generator_0|clk_50hz ; 3.722 ; 3.722 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[0][5] ; clk_generator:clk_generator_0|clk_50hz ; 3.963 ; 3.963 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[0][6] ; clk_generator:clk_generator_0|clk_50hz ; 3.842 ; 3.842 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+; segment_a[1][*]  ; clk_generator:clk_generator_0|clk_50hz ; 3.724 ; 3.724 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[1][0] ; clk_generator:clk_generator_0|clk_50hz ; 3.753 ; 3.753 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[1][1] ; clk_generator:clk_generator_0|clk_50hz ; 3.857 ; 3.857 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[1][2] ; clk_generator:clk_generator_0|clk_50hz ; 3.858 ; 3.858 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[1][3] ; clk_generator:clk_generator_0|clk_50hz ; 3.786 ; 3.786 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[1][4] ; clk_generator:clk_generator_0|clk_50hz ; 3.888 ; 3.888 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[1][5] ; clk_generator:clk_generator_0|clk_50hz ; 3.724 ; 3.724 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_a[1][6] ; clk_generator:clk_generator_0|clk_50hz ; 3.761 ; 3.761 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+; segment_b[0][*]  ; clk_generator:clk_generator_0|clk_50hz ; 3.553 ; 3.553 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[0][1] ; clk_generator:clk_generator_0|clk_50hz ; 3.553 ; 3.553 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[0][2] ; clk_generator:clk_generator_0|clk_50hz ; 3.709 ; 3.709 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[0][3] ; clk_generator:clk_generator_0|clk_50hz ; 3.739 ; 3.739 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[0][4] ; clk_generator:clk_generator_0|clk_50hz ; 3.674 ; 3.674 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[0][5] ; clk_generator:clk_generator_0|clk_50hz ; 3.656 ; 3.656 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[0][6] ; clk_generator:clk_generator_0|clk_50hz ; 3.799 ; 3.799 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+; segment_b[1][*]  ; clk_generator:clk_generator_0|clk_50hz ; 3.565 ; 3.565 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[1][0] ; clk_generator:clk_generator_0|clk_50hz ; 3.583 ; 3.583 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[1][1] ; clk_generator:clk_generator_0|clk_50hz ; 3.717 ; 3.717 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[1][2] ; clk_generator:clk_generator_0|clk_50hz ; 3.672 ; 3.672 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[1][3] ; clk_generator:clk_generator_0|clk_50hz ; 3.565 ; 3.565 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[1][4] ; clk_generator:clk_generator_0|clk_50hz ; 3.582 ; 3.582 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[1][5] ; clk_generator:clk_generator_0|clk_50hz ; 3.658 ; 3.658 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
+;  segment_b[1][6] ; clk_generator:clk_generator_0|clk_50hz ; 3.565 ; 3.565 ; Rise       ; clk_generator:clk_generator_0|clk_50hz ;
++------------------+----------------------------------------+-------+-------+------------+----------------------------------------+
+
+
++-------------------------------------------------------+
+; Progagation Delay                                     ;
++------------+----------------+-------+----+----+-------+
+; Input Port ; Output Port    ; RR    ; RF ; FR ; FF    ;
++------------+----------------+-------+----+----+-------+
+; sw_a[0]    ; sw_a_led[0]    ; 4.763 ;    ;    ; 4.763 ;
+; sw_a[1]    ; sw_a_led[1]    ; 8.788 ;    ;    ; 8.788 ;
+; sw_a[2]    ; sw_a_led[2]    ; 8.805 ;    ;    ; 8.805 ;
+; sw_a[3]    ; sw_a_led[3]    ; 8.607 ;    ;    ; 8.607 ;
+; sw_b[0]    ; sw_b_led[0]    ; 8.153 ;    ;    ; 8.153 ;
+; sw_b[1]    ; sw_b_led[1]    ; 8.014 ;    ;    ; 8.014 ;
+; sw_b[2]    ; sw_b_led[2]    ; 8.105 ;    ;    ; 8.105 ;
+; sw_b[3]    ; sw_b_led[3]    ; 8.847 ;    ;    ; 8.847 ;
+; sw_mode[0] ; sw_mode_led[0] ; 7.914 ;    ;    ; 7.914 ;
+; sw_mode[1] ; sw_mode_led[1] ; 8.006 ;    ;    ; 8.006 ;
++------------+----------------+-------+----+----+-------+
+
+
++-------------------------------------------------------+
+; Minimum Progagation Delay                             ;
++------------+----------------+-------+----+----+-------+
+; Input Port ; Output Port    ; RR    ; RF ; FR ; FF    ;
++------------+----------------+-------+----+----+-------+
+; sw_a[0]    ; sw_a_led[0]    ; 2.537 ;    ;    ; 2.537 ;
+; sw_a[1]    ; sw_a_led[1]    ; 4.994 ;    ;    ; 4.994 ;
+; sw_a[2]    ; sw_a_led[2]    ; 4.995 ;    ;    ; 4.995 ;
+; sw_a[3]    ; sw_a_led[3]    ; 4.927 ;    ;    ; 4.927 ;
+; sw_b[0]    ; sw_b_led[0]    ; 4.762 ;    ;    ; 4.762 ;
+; sw_b[1]    ; sw_b_led[1]    ; 4.655 ;    ;    ; 4.655 ;
+; sw_b[2]    ; sw_b_led[2]    ; 4.643 ;    ;    ; 4.643 ;
+; sw_b[3]    ; sw_b_led[3]    ; 5.052 ;    ;    ; 5.052 ;
+; sw_mode[0] ; sw_mode_led[0] ; 4.572 ;    ;    ; 4.572 ;
+; sw_mode[1] ; sw_mode_led[1] ; 4.662 ;    ;    ; 4.662 ;
++------------+----------------+-------+----+----+-------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                   ;
++----------------------------------------+--------------+----------+----------+----------+----------+
+; From Clock                             ; To Clock     ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++----------------------------------------+--------------+----------+----------+----------+----------+
+; clk_50megahz                           ; clk_50megahz ; 1386     ; 0        ; 0        ; 0        ;
+; clk_generator:clk_generator_0|clk_50hz ; clk_50megahz ; 1        ; 1        ; 0        ; 0        ;
++----------------------------------------+--------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++---------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                    ;
++----------------------------------------+--------------+----------+----------+----------+----------+
+; From Clock                             ; To Clock     ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++----------------------------------------+--------------+----------+----------+----------+----------+
+; clk_50megahz                           ; clk_50megahz ; 1386     ; 0        ; 0        ; 0        ;
+; clk_generator:clk_generator_0|clk_50hz ; clk_50megahz ; 1        ; 1        ; 0        ; 0        ;
++----------------------------------------+--------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 11    ; 11   ;
+; Unconstrained Input Port Paths  ; 59    ; 59   ;
+; Unconstrained Output Ports      ; 36    ; 36   ;
+; Unconstrained Output Port Paths ; 110   ; 110  ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Mon Sep 25 23:09:25 2023
+Info: Command: quartus_sta ALU_7Segment_Display -c top
+Info: qsta_default_script.tcl version: #1
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'top.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk_50megahz clk_50megahz
+    Info (332105): create_clock -period 1.000 -name clk_generator:clk_generator_0|clk_50hz clk_generator:clk_generator_0|clk_50hz
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -2.787
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.787       -81.439 clk_50megahz 
+Info (332146): Worst-case hold slack is -2.524
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.524        -2.524 clk_50megahz 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -34.380 clk_50megahz 
+    Info (332119):    -0.500        -8.000 clk_generator:clk_generator_0|clk_50hz 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.836
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.836       -20.705 clk_50megahz 
+Info (332146): Worst-case hold slack is -1.568
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.568        -1.568 clk_50megahz 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -34.380 clk_50megahz 
+    Info (332119):    -0.500        -8.000 clk_generator:clk_generator_0|clk_50hz 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4583 megabytes
+    Info: Processing ended: Mon Sep 25 23:09:25 2023
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
+
+
