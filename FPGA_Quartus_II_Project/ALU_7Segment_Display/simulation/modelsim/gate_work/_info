@@ -1,0 +1,25 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Ericlai\Documents\Verilog_Practice\FPGA_Quartus_II_Project\ALU_7Segment_Display\simulation\modelsim
+vtop_bcd
+!i10b 1
+!s100 ia[gAlS>VTRSC^F^5`PJ61
+I>V<GhHmzHHCLaWHT?R1[g3
+VZ`38_Z4eKlQTgKhIEoeT<0
+Z1 dC:\Users\Ericlai\Documents\Verilog_Practice\FPGA_Quartus_II_Project\ALU_7Segment_Display\simulation\modelsim
+w1695823343
+8top.vo
+Ftop.vo
+L0 31
+OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1695823349.483000
+!s107 top.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|top.vo|
+!s101 -O0
+o-vlog01compat -work work -O0
+!s92 -vlog01compat -work work +incdir+. -O0

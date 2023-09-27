@@ -1,0 +1,51 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do top_run_msim_gate_verilog.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+. {top.vo}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module top_bcd
+# 
+# Top level modules:
+# 	top_bcd
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/Ericlai/Documents/Verilog_Practice/FPGA_Quartus_II_Project/ALU_7Segment_Display {C:/Users/Ericlai/Documents/Verilog_Practice/FPGA_Quartus_II_Project/ALU_7Segment_Display/top_tb.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module top_tb
+# ** Error: C:/Users/Ericlai/Documents/Verilog_Practice/FPGA_Quartus_II_Project/ALU_7Segment_Display/top_tb.v(20): (vlog-2110) Illegal reference to memory "bcd_result".
+# 
+# ** Error: C:/Users/Ericlai/Documents/Verilog_Practice/FPGA_Quartus_II_Project/ALU_7Segment_Display/top_tb.v(20): (vlog-2110) Illegal reference to memory "bcd_result".
+# 
+# ** Error: C:/Users/Ericlai/Documents/Verilog_Practice/FPGA_Quartus_II_Project/ALU_7Segment_Display/top_tb.v(19): (vlog-2110) Illegal reference to memory "bcd_b".
+# 
+# ** Error: C:/Users/Ericlai/Documents/Verilog_Practice/FPGA_Quartus_II_Project/ALU_7Segment_Display/top_tb.v(19): (vlog-2110) Illegal reference to memory "bcd_b".
+# 
+# ** Error: C:/Users/Ericlai/Documents/Verilog_Practice/FPGA_Quartus_II_Project/ALU_7Segment_Display/top_tb.v(18): (vlog-2110) Illegal reference to memory "bcd_a".
+# 
+# ** Error: C:/Users/Ericlai/Documents/Verilog_Practice/FPGA_Quartus_II_Project/ALU_7Segment_Display/top_tb.v(18): (vlog-2110) Illegal reference to memory "bcd_a".
+# 
+# ** Error: C:/Users/Ericlai/Documents/Verilog_Practice/FPGA_Quartus_II_Project/ALU_7Segment_Display/top_tb.v(29): (vlog-2110) Illegal reference to memory "bcd_a".
+# 
+# ** Error: C:/Users/Ericlai/Documents/Verilog_Practice/FPGA_Quartus_II_Project/ALU_7Segment_Display/top_tb.v(29): Illegal LHS of assignment.
+# ** Error: C:/Users/Ericlai/Documents/Verilog_Practice/FPGA_Quartus_II_Project/ALU_7Segment_Display/top_tb.v(29): Illegal assignment to type 'reg[3:0] $[1:0]' from type 'reg[7:0]': Cannot assign a packed type to an unpacked type.
+# ** Error: C:/Users/Ericlai/Documents/Verilog_Practice/FPGA_Quartus_II_Project/ALU_7Segment_Display/top_tb.v(30): (vlog-2110) Illegal reference to memory "bcd_b".
+# 
+# ** Error: C:/Users/Ericlai/Documents/Verilog_Practice/FPGA_Quartus_II_Project/ALU_7Segment_Display/top_tb.v(30): Illegal LHS of assignment.
+# ** Error: C:/Users/Ericlai/Documents/Verilog_Practice/FPGA_Quartus_II_Project/ALU_7Segment_Display/top_tb.v(30): Illegal assignment to type 'reg[3:0] $[1:0]' from type 'reg[7:0]': Cannot assign a packed type to an unpacked type.
+# ** Error: C:/Users/Ericlai/Documents/Verilog_Practice/FPGA_Quartus_II_Project/ALU_7Segment_Display/top_tb.v(31): (vlog-2110) Illegal reference to memory "bcd_result".
+# 
+# ** Error: C:/Users/Ericlai/Documents/Verilog_Practice/FPGA_Quartus_II_Project/ALU_7Segment_Display/top_tb.v(31): Illegal LHS of assignment.
+# ** Error: C:/Users/Ericlai/Documents/Verilog_Practice/FPGA_Quartus_II_Project/ALU_7Segment_Display/top_tb.v(31): Illegal assignment to type 'reg[3:0] $[3:0]' from type 'reg[15:0]': Cannot assign a packed type to an unpacked type.
+# ** Error: C:/altera/13.0sp1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./top_run_msim_gate_verilog.do line 10
+# C:/altera/13.0sp1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -vlog01compat -work work +incdir+C:/Users/Ericlai/Documents/Verilog_Practice/FPGA_Quartus_II_Project/ALU_7Segment_Display {C:/Users/Ericlai/Docum..."

@@ -1,4 +1,4 @@
-|top
+|top_bcd
 clk_50megahz => clk_50megahz.IN1
 sw_a[0] => sw_a[0].IN2
 sw_a[1] => sw_a[1].IN2
@@ -24,65 +24,41 @@ sw_mode_led[0] <= sw_mode[0].DB_MAX_OUTPUT_PORT_TYPE
 sw_mode_led[1] <= sw_mode[1].DB_MAX_OUTPUT_PORT_TYPE
 key_flag_n <= flag_n.DB_MAX_OUTPUT_PORT_TYPE
 key_rst_n <= rst_n.DB_MAX_OUTPUT_PORT_TYPE
-segment_a[0][0] <= bcd2segment:bcd2segment_a_0.port1
-segment_a[0][1] <= bcd2segment:bcd2segment_a_0.port1
-segment_a[0][2] <= bcd2segment:bcd2segment_a_0.port1
-segment_a[0][3] <= bcd2segment:bcd2segment_a_0.port1
-segment_a[0][4] <= bcd2segment:bcd2segment_a_0.port1
-segment_a[0][5] <= bcd2segment:bcd2segment_a_0.port1
-segment_a[0][6] <= bcd2segment:bcd2segment_a_0.port1
-segment_a[1][0] <= bcd2segment:bcd2segment_a_1.port1
-segment_a[1][1] <= bcd2segment:bcd2segment_a_1.port1
-segment_a[1][2] <= bcd2segment:bcd2segment_a_1.port1
-segment_a[1][3] <= bcd2segment:bcd2segment_a_1.port1
-segment_a[1][4] <= bcd2segment:bcd2segment_a_1.port1
-segment_a[1][5] <= bcd2segment:bcd2segment_a_1.port1
-segment_a[1][6] <= bcd2segment:bcd2segment_a_1.port1
-segment_b[0][0] <= bcd2segment:bcd2segment_b_0.port1
-segment_b[0][1] <= bcd2segment:bcd2segment_b_0.port1
-segment_b[0][2] <= bcd2segment:bcd2segment_b_0.port1
-segment_b[0][3] <= bcd2segment:bcd2segment_b_0.port1
-segment_b[0][4] <= bcd2segment:bcd2segment_b_0.port1
-segment_b[0][5] <= bcd2segment:bcd2segment_b_0.port1
-segment_b[0][6] <= bcd2segment:bcd2segment_b_0.port1
-segment_b[1][0] <= bcd2segment:bcd2segment_b_1.port1
-segment_b[1][1] <= bcd2segment:bcd2segment_b_1.port1
-segment_b[1][2] <= bcd2segment:bcd2segment_b_1.port1
-segment_b[1][3] <= bcd2segment:bcd2segment_b_1.port1
-segment_b[1][4] <= bcd2segment:bcd2segment_b_1.port1
-segment_b[1][5] <= bcd2segment:bcd2segment_b_1.port1
-segment_b[1][6] <= bcd2segment:bcd2segment_b_1.port1
-segment_result[0][0] <= bcd2segment:bcd2segment_result_0.port1
-segment_result[0][1] <= bcd2segment:bcd2segment_result_0.port1
-segment_result[0][2] <= bcd2segment:bcd2segment_result_0.port1
-segment_result[0][3] <= bcd2segment:bcd2segment_result_0.port1
-segment_result[0][4] <= bcd2segment:bcd2segment_result_0.port1
-segment_result[0][5] <= bcd2segment:bcd2segment_result_0.port1
-segment_result[0][6] <= bcd2segment:bcd2segment_result_0.port1
-segment_result[1][0] <= bcd2segment:bcd2segment_result_1.port1
-segment_result[1][1] <= bcd2segment:bcd2segment_result_1.port1
-segment_result[1][2] <= bcd2segment:bcd2segment_result_1.port1
-segment_result[1][3] <= bcd2segment:bcd2segment_result_1.port1
-segment_result[1][4] <= bcd2segment:bcd2segment_result_1.port1
-segment_result[1][5] <= bcd2segment:bcd2segment_result_1.port1
-segment_result[1][6] <= bcd2segment:bcd2segment_result_1.port1
-segment_result[2][0] <= bcd2segment:bcd2segment_result_2.port1
-segment_result[2][1] <= bcd2segment:bcd2segment_result_2.port1
-segment_result[2][2] <= bcd2segment:bcd2segment_result_2.port1
-segment_result[2][3] <= bcd2segment:bcd2segment_result_2.port1
-segment_result[2][4] <= bcd2segment:bcd2segment_result_2.port1
-segment_result[2][5] <= bcd2segment:bcd2segment_result_2.port1
-segment_result[2][6] <= bcd2segment:bcd2segment_result_2.port1
-segment_result[3][0] <= bcd2segment:bcd2segment_result_3.port1
-segment_result[3][1] <= bcd2segment:bcd2segment_result_3.port1
-segment_result[3][2] <= bcd2segment:bcd2segment_result_3.port1
-segment_result[3][3] <= bcd2segment:bcd2segment_result_3.port1
-segment_result[3][4] <= bcd2segment:bcd2segment_result_3.port1
-segment_result[3][5] <= bcd2segment:bcd2segment_result_3.port1
-segment_result[3][6] <= bcd2segment:bcd2segment_result_3.port1
+bcd_a[0][0] <= num2binary2bcd:num2binary2bcd_a.BCD[0][0]
+bcd_a[0][1] <= num2binary2bcd:num2binary2bcd_a.BCD[0][1]
+bcd_a[0][2] <= num2binary2bcd:num2binary2bcd_a.BCD[0][2]
+bcd_a[0][3] <= num2binary2bcd:num2binary2bcd_a.BCD[0][3]
+bcd_a[1][0] <= num2binary2bcd:num2binary2bcd_a.BCD[1][0]
+bcd_a[1][1] <= num2binary2bcd:num2binary2bcd_a.BCD[1][1]
+bcd_a[1][2] <= num2binary2bcd:num2binary2bcd_a.BCD[1][2]
+bcd_a[1][3] <= num2binary2bcd:num2binary2bcd_a.BCD[1][3]
+bcd_b[0][0] <= num2binary2bcd:num2binary2bcd_b.BCD[0][0]
+bcd_b[0][1] <= num2binary2bcd:num2binary2bcd_b.BCD[0][1]
+bcd_b[0][2] <= num2binary2bcd:num2binary2bcd_b.BCD[0][2]
+bcd_b[0][3] <= num2binary2bcd:num2binary2bcd_b.BCD[0][3]
+bcd_b[1][0] <= num2binary2bcd:num2binary2bcd_b.BCD[1][0]
+bcd_b[1][1] <= num2binary2bcd:num2binary2bcd_b.BCD[1][1]
+bcd_b[1][2] <= num2binary2bcd:num2binary2bcd_b.BCD[1][2]
+bcd_b[1][3] <= num2binary2bcd:num2binary2bcd_b.BCD[1][3]
+bcd_result[0][0] <= num4binary2bcd:num4binary2bcd_result.BCD[0][0]
+bcd_result[0][1] <= num4binary2bcd:num4binary2bcd_result.BCD[0][1]
+bcd_result[0][2] <= num4binary2bcd:num4binary2bcd_result.BCD[0][2]
+bcd_result[0][3] <= num4binary2bcd:num4binary2bcd_result.BCD[0][3]
+bcd_result[1][0] <= num4binary2bcd:num4binary2bcd_result.BCD[1][0]
+bcd_result[1][1] <= num4binary2bcd:num4binary2bcd_result.BCD[1][1]
+bcd_result[1][2] <= num4binary2bcd:num4binary2bcd_result.BCD[1][2]
+bcd_result[1][3] <= num4binary2bcd:num4binary2bcd_result.BCD[1][3]
+bcd_result[2][0] <= num4binary2bcd:num4binary2bcd_result.BCD[2][0]
+bcd_result[2][1] <= num4binary2bcd:num4binary2bcd_result.BCD[2][1]
+bcd_result[2][2] <= num4binary2bcd:num4binary2bcd_result.BCD[2][2]
+bcd_result[2][3] <= num4binary2bcd:num4binary2bcd_result.BCD[2][3]
+bcd_result[3][0] <= num4binary2bcd:num4binary2bcd_result.BCD[3][0]
+bcd_result[3][1] <= num4binary2bcd:num4binary2bcd_result.BCD[3][1]
+bcd_result[3][2] <= num4binary2bcd:num4binary2bcd_result.BCD[3][2]
+bcd_result[3][3] <= num4binary2bcd:num4binary2bcd_result.BCD[3][3]
 
 
-|top|clk_generator:clk_generator_0
+|top_bcd|clk_generator:clk_generator_0
 clk => clk_50hz~reg0.CLK
 clk => clk_50hz_count[0].CLK
 clk => clk_50hz_count[1].CLK
@@ -152,7 +128,7 @@ rst => clk_50hz_count[31].ACLR
 clk_50hz <= clk_50hz~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|temp_reg:temp_reg_0
+|top_bcd|temp_reg:temp_reg_0
 clk => reg_result[0]~reg0.CLK
 clk => reg_result[1]~reg0.CLK
 clk => reg_result[2]~reg0.CLK
@@ -219,7 +195,7 @@ reg_result[6] <= reg_result[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 reg_result[7] <= reg_result[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|alu:alu_0
+|top_bcd|alu:alu_0
 clk => result[0]~reg0.CLK
 clk => result[1]~reg0.CLK
 clk => result[2]~reg0.CLK
@@ -279,7 +255,7 @@ result[6] <= result[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 result[7] <= result[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|num2binary2bcd:num2binary2bcd_a
+|top_bcd|num2binary2bcd:num2binary2bcd_a
 num[0] => LessThan0.IN8
 num[0] => Add0.IN8
 num[0] => temp_num.DATAA
@@ -302,7 +278,7 @@ BCD[1][2] <= temp_num.DB_MAX_OUTPUT_PORT_TYPE
 BCD[1][3] <= temp_num.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|num2binary2bcd:num2binary2bcd_b
+|top_bcd|num2binary2bcd:num2binary2bcd_b
 num[0] => LessThan0.IN8
 num[0] => Add0.IN8
 num[0] => temp_num.DATAA
@@ -325,7 +301,7 @@ BCD[1][2] <= temp_num.DB_MAX_OUTPUT_PORT_TYPE
 BCD[1][3] <= temp_num.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|num4binary2bcd:num4binary2bcd_result
+|top_bcd|num4binary2bcd:num4binary2bcd_result
 result[0] => ~NO_FANOUT~
 result[1] => ~NO_FANOUT~
 result[2] => ~NO_FANOUT~
@@ -350,117 +326,5 @@ BCD[3][0] <= <GND>
 BCD[3][1] <= <GND>
 BCD[3][2] <= <GND>
 BCD[3][3] <= <GND>
-
-
-|top|bcd2segment:bcd2segment_a_0
-num_bcd[0] => Decoder0.IN3
-num_bcd[1] => Decoder0.IN2
-num_bcd[2] => Decoder0.IN1
-num_bcd[3] => Decoder0.IN0
-num_segment[0] <= num_segment.DB_MAX_OUTPUT_PORT_TYPE
-num_segment[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
-num_segment[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
-num_segment[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
-num_segment[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
-num_segment[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
-num_segment[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|bcd2segment:bcd2segment_a_1
-num_bcd[0] => Decoder0.IN3
-num_bcd[1] => Decoder0.IN2
-num_bcd[2] => Decoder0.IN1
-num_bcd[3] => Decoder0.IN0
-num_segment[0] <= num_segment.DB_MAX_OUTPUT_PORT_TYPE
-num_segment[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
-num_segment[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
-num_segment[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
-num_segment[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
-num_segment[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
-num_segment[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|bcd2segment:bcd2segment_b_0
-num_bcd[0] => Decoder0.IN3
-num_bcd[1] => Decoder0.IN2
-num_bcd[2] => Decoder0.IN1
-num_bcd[3] => Decoder0.IN0
-num_segment[0] <= num_segment.DB_MAX_OUTPUT_PORT_TYPE
-num_segment[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
-num_segment[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
-num_segment[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
-num_segment[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
-num_segment[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
-num_segment[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|bcd2segment:bcd2segment_b_1
-num_bcd[0] => Decoder0.IN3
-num_bcd[1] => Decoder0.IN2
-num_bcd[2] => Decoder0.IN1
-num_bcd[3] => Decoder0.IN0
-num_segment[0] <= num_segment.DB_MAX_OUTPUT_PORT_TYPE
-num_segment[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
-num_segment[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
-num_segment[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
-num_segment[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
-num_segment[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
-num_segment[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|bcd2segment:bcd2segment_result_0
-num_bcd[0] => Decoder0.IN3
-num_bcd[1] => Decoder0.IN2
-num_bcd[2] => Decoder0.IN1
-num_bcd[3] => Decoder0.IN0
-num_segment[0] <= num_segment.DB_MAX_OUTPUT_PORT_TYPE
-num_segment[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
-num_segment[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
-num_segment[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
-num_segment[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
-num_segment[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
-num_segment[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|bcd2segment:bcd2segment_result_1
-num_bcd[0] => Decoder0.IN3
-num_bcd[1] => Decoder0.IN2
-num_bcd[2] => Decoder0.IN1
-num_bcd[3] => Decoder0.IN0
-num_segment[0] <= num_segment.DB_MAX_OUTPUT_PORT_TYPE
-num_segment[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
-num_segment[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
-num_segment[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
-num_segment[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
-num_segment[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
-num_segment[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|bcd2segment:bcd2segment_result_2
-num_bcd[0] => Decoder0.IN3
-num_bcd[1] => Decoder0.IN2
-num_bcd[2] => Decoder0.IN1
-num_bcd[3] => Decoder0.IN0
-num_segment[0] <= num_segment.DB_MAX_OUTPUT_PORT_TYPE
-num_segment[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
-num_segment[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
-num_segment[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
-num_segment[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
-num_segment[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
-num_segment[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|bcd2segment:bcd2segment_result_3
-num_bcd[0] => Decoder0.IN3
-num_bcd[1] => Decoder0.IN2
-num_bcd[2] => Decoder0.IN1
-num_bcd[3] => Decoder0.IN0
-num_segment[0] <= num_segment.DB_MAX_OUTPUT_PORT_TYPE
-num_segment[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
-num_segment[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
-num_segment[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
-num_segment[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
-num_segment[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
-num_segment[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 

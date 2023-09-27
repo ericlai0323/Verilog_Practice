@@ -1,0 +1,41 @@
+`timescale 1ns/1ns
+module top_tb();
+    reg clk,flag_n,rst_n
+    reg[3:0]sw_a,[3:0]sw_b,[1:0]sw_mode,[3:0]bcd_a[1:0],[3:0]bcd_b[1:0],[3:0]bcd_result[3:0];
+    
+    top top_0(
+        .clk(clk),
+        .flag_n(flag_n),
+        .rst_n(rst_n),
+        .sw_a(sw_a),
+        .sw_b(sw_b),
+        .sw_mode(sw_mode),
+        .bcd_a(bcd_a),
+        .bcd_b(bcd_b),
+        .bcd_result(bcd_result)
+        );
+
+    initial 
+    begin
+        sw_a = {0,0,0,0};
+        sw_b = {0,0,0,0};
+        sw_mode = {0,0};
+
+        #10;
+        sw_a = {0,0,0,1};
+        sw_b = {0,0,1,0};
+        sw_mode = {0,0};
+
+        #15;
+        sw_a = {0,1,0,0};
+        sw_b = {1,0,0,0};
+        sw_mode = {0,0};
+
+        #20;
+        sw_a = {1,0,0,1};
+        sw_b = {1,0,1,0};
+        sw_mode = {0,0};        
+
+    end
+
+endmodule

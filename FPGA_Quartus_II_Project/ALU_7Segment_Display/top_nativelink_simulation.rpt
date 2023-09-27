@@ -1,0 +1,112 @@
+Info: Start Nativelink Simulation process
+
+========= EDA Simulation Settings =====================
+
+Sim Mode              :  Gate
+Family                :  cycloneii
+Quartus root          :  c:/altera/13.0sp1/quartus/bin64/
+Quartus sim root      :  c:/altera/13.0sp1/quartus/eda/sim_lib
+Simulation Tool       :  modelsim-altera
+Simulation Language   :  verilog
+Simulation Mode       :  GUI
+Sim Output File       :  top.vo
+Sim SDF file          :  top__verilog.sdo
+Sim dir               :  simulation\modelsim
+
+=======================================================
+
+Info: Starting NativeLink simulation with ModelSim-Altera software
+Sourced NativeLink script c:/altera/13.0sp1/quartus/common/tcl/internal/nativelink/modelsim.tcl
+Warning: File top_run_msim_gate_verilog.do already exists - backing up current file as top_run_msim_gate_verilog.do.bak
+Probing transcript
+ModelSim-Altera Info: # Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+ModelSim-Altera Info: # do top_run_msim_gate_verilog.do 
+ModelSim-Altera Info: # if {[file exists gate_work]} {
+ModelSim-Altera Info: # 	vdel -lib gate_work -all
+ModelSim-Altera Info: # }
+ModelSim-Altera Info: # vlib gate_work
+ModelSim-Altera Info: # vmap work gate_work
+ModelSim-Altera Info: # Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+ModelSim-Altera Info: # Modifying modelsim.ini
+ModelSim-Altera Warning: # ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+ModelSim-Altera Info: #          Updated modelsim.ini.
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # vlog -vlog01compat -work work +incdir+. {top.vo}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling module top_bcd
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	top_bcd
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # vlog -vlog01compat -work work +incdir+C:/Users/Ericlai/Documents/Verilog_Practice/FPGA_Quartus_II_Project/ALU_7Segment_Display {C:/Users/Ericlai/Documents/Verilog_Practice/FPGA_Quartus_II_Project/ALU_7Segment_Display/top_tb.v}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling module top_tb
+ModelSim-Altera Error: # ** Error: C:/Users/Ericlai/Documents/Verilog_Practice/FPGA_Quartus_II_Project/ALU_7Segment_Display/top_tb.v(20): (vlog-2110) Illegal reference to memory "bcd_result".
+ModelSim-Altera Info: # 
+ModelSim-Altera Error: # ** Error: C:/Users/Ericlai/Documents/Verilog_Practice/FPGA_Quartus_II_Project/ALU_7Segment_Display/top_tb.v(20): (vlog-2110) Illegal reference to memory "bcd_result".
+ModelSim-Altera Info: # 
+ModelSim-Altera Error: # ** Error: C:/Users/Ericlai/Documents/Verilog_Practice/FPGA_Quartus_II_Project/ALU_7Segment_Display/top_tb.v(19): (vlog-2110) Illegal reference to memory "bcd_b".
+ModelSim-Altera Info: # 
+ModelSim-Altera Error: # ** Error: C:/Users/Ericlai/Documents/Verilog_Practice/FPGA_Quartus_II_Project/ALU_7Segment_Display/top_tb.v(19): (vlog-2110) Illegal reference to memory "bcd_b".
+ModelSim-Altera Info: # 
+ModelSim-Altera Error: # ** Error: C:/Users/Ericlai/Documents/Verilog_Practice/FPGA_Quartus_II_Project/ALU_7Segment_Display/top_tb.v(18): (vlog-2110) Illegal reference to memory "bcd_a".
+ModelSim-Altera Info: # 
+ModelSim-Altera Error: # ** Error: C:/Users/Ericlai/Documents/Verilog_Practice/FPGA_Quartus_II_Project/ALU_7Segment_Display/top_tb.v(18): (vlog-2110) Illegal reference to memory "bcd_a".
+ModelSim-Altera Info: # 
+ModelSim-Altera Error: # ** Error: C:/Users/Ericlai/Documents/Verilog_Practice/FPGA_Quartus_II_Project/ALU_7Segment_Display/top_tb.v(29): (vlog-2110) Illegal reference to memory "bcd_a".
+ModelSim-Altera Info: # 
+ModelSim-Altera Error: # ** Error: C:/Users/Ericlai/Documents/Verilog_Practice/FPGA_Quartus_II_Project/ALU_7Segment_Display/top_tb.v(29): Illegal LHS of assignment.
+ModelSim-Altera Error: # ** Error: C:/Users/Ericlai/Documents/Verilog_Practice/FPGA_Quartus_II_Project/ALU_7Segment_Display/top_tb.v(29): Illegal assignment to type 'reg[3:0] $[1:0]' from type 'reg[7:0]': Cannot assign a packed type to an unpacked type.
+ModelSim-Altera Error: # ** Error: C:/Users/Ericlai/Documents/Verilog_Practice/FPGA_Quartus_II_Project/ALU_7Segment_Display/top_tb.v(30): (vlog-2110) Illegal reference to memory "bcd_b".
+ModelSim-Altera Info: # 
+ModelSim-Altera Error: # ** Error: C:/Users/Ericlai/Documents/Verilog_Practice/FPGA_Quartus_II_Project/ALU_7Segment_Display/top_tb.v(30): Illegal LHS of assignment.
+ModelSim-Altera Error: # ** Error: C:/Users/Ericlai/Documents/Verilog_Practice/FPGA_Quartus_II_Project/ALU_7Segment_Display/top_tb.v(30): Illegal assignment to type 'reg[3:0] $[1:0]' from type 'reg[7:0]': Cannot assign a packed type to an unpacked type.
+ModelSim-Altera Error: # ** Error: C:/Users/Ericlai/Documents/Verilog_Practice/FPGA_Quartus_II_Project/ALU_7Segment_Display/top_tb.v(31): (vlog-2110) Illegal reference to memory "bcd_result".
+ModelSim-Altera Info: # 
+ModelSim-Altera Error: # ** Error: C:/Users/Ericlai/Documents/Verilog_Practice/FPGA_Quartus_II_Project/ALU_7Segment_Display/top_tb.v(31): Illegal LHS of assignment.
+ModelSim-Altera Error: # ** Error: C:/Users/Ericlai/Documents/Verilog_Practice/FPGA_Quartus_II_Project/ALU_7Segment_Display/top_tb.v(31): Illegal assignment to type 'reg[3:0] $[3:0]' from type 'reg[15:0]': Cannot assign a packed type to an unpacked type.
+ModelSim-Altera Error: # ** Error: C:/altera/13.0sp1/modelsim_ase/win32aloem/vlog failed.
+ModelSim-Altera Info: # Error in macro ./top_run_msim_gate_verilog.do line 10
+ModelSim-Altera Info: # C:/altera/13.0sp1/modelsim_ase/win32aloem/vlog failed.
+ModelSim-Altera Info: #     while executing
+ModelSim-Altera Info: # "vlog -vlog01compat -work work +incdir+C:/Users/Ericlai/Documents/Verilog_Practice/FPGA_Quartus_II_Project/ALU_7Segment_Display {C:/Users/Ericlai/Docum..."
+Error: Errors encountered while running modelsim do file
+Error: NativeLink simulation flow was NOT successful
+
+
+
+================The following additional information is provided to help identify the cause of error while running nativelink scripts=================
+Nativelink TCL script failed with errorCode:  1
+Nativelink TCL script failed with errorInfo:  1
+    (procedure "launch_sim" line 1)
+    invoked from within
+"launch_sim launch_args_hash"
+    ("eval" body line 1)
+    invoked from within
+"eval launch_sim launch_args_hash"
+    invoked from within
+"if [ info exists ::errorCode ] {
+				set savedCode $::errorCode
+				set savedInfo $::errorInfo
+				error $result $savedInfo $savedCode
+			} else {
+			..."
+    invoked from within
+"if [catch {eval launch_sim launch_args_hash} result ] {
+			set status 1
+			if [ info exists ::errorCode ] {
+				set savedCode $::errorCode
+				set sav..."
+    (procedure "run_sim" line 78)
+    invoked from within
+"run_sim run_sim_args_hash"
+    invoked from within
+"if [ info exists ::errorCode ] {
+			set savedCode $::errorCode
+			set savedInfo $::errorInfo
+			error "$result" $savedInfo $savedCode
+		} else {
+			er..."
+    (procedure "run_eda_simulation_tool" line 330)
+    invoked from within
+"run_eda_simulation_tool eda_opts_hash"
