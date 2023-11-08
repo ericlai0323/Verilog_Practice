@@ -13,10 +13,12 @@ binary_data = input_data{:, 1}';
 s2p_ik = [];
 s2p_qk = [];
 
+s2p_ik(1) = 0;
+s2p_qk(1) = 0;
 % Iterate through the binary data
-for i = 1:length(binary_data)
+for i = 2:(length(binary_data)+1)
     % Append the binary digit to s2p_ik or s2p_qk based on its position
-    binary_digit = binary_data(i);
+    binary_digit = binary_data(i-1);
     if mod(i, 2) == 1
         s2p_ik = [s2p_ik binary_digit];
     else
@@ -26,33 +28,47 @@ end
 
 %% Differential Encoder
 % Initialize diff_output_eik and diff_output_eqk as zero arrays
-diff_output_eik = zeros(size(s2p_ik));
-diff_output_eqk = zeros(size(s2p_qk));
+diff_output_eik = zeros(1, length(s2p_ik) + 1);
+diff_output_eqk = zeros(1, length(s2p_qk) + 1);
 
-diff_output_quadrant = zeros(size(s2p_ik));
+% diff_output_quadrant = zeros(size(s2p_ik)+1);
 
-diff_output_eik_prev = 0;
-diff_output_eqk_prev = 0;
+% disp(['Length of diff_output_eik: ' num2str(length(diff_output_eik))]);
+% disp(['Length of diff_output_eqk: ' num2str(length(diff_output_eqk))]);
+
 
 % Iterate through s2p_ik and s2p_qk to perform differential encoding
-for i = 1:length(s2p_ik)
+for i = 1:(length(s2p_ik)-1)
     % Calculate differential encoding for s2p_ik and s2p_qk
-    diff_output_eik(i) = and(not(xor(s2p_ik(i), s2p_qk(i))), xor(s2p_ik(i), diff_output_eik_prev)) + and(xor(s2p_ik(i), s2p_qk(i)), xor(s2p_qk(i), diff_output_eqk_prev));
-    diff_output_eqk(i) = and(not(xor(s2p_ik(i), s2p_qk(i))), xor(s2p_qk(i), diff_output_eqk_prev)) + and(xor(s2p_ik(i), s2p_qk(i)), xor(s2p_ik(i), diff_output_eik_prev));
+    diff_output_eik(i+1) = and(not(xor(s2p_ik(i+1), s2p_qk(i+1))), xor(s2p_ik(i+1), diff_output_eik(i))) + and(xor(s2p_ik(i+1), s2p_qk(i+1)), xor(s2p_qk(i+1), diff_output_eqk(i)));
+    diff_output_eqk(i+1) = and(not(xor(s2p_ik(i+1), s2p_qk(i+1))), xor(s2p_qk(i+1), diff_output_eqk(i))) + and(xor(s2p_ik(i+1), s2p_qk(i+1)), xor(s2p_ik(i+1), diff_output_eik(i)));
     
-    if diff_output_eik(i) == 0 && diff_output_eqk(i) == 0
-        diff_output_quadrant(i) = 1;
-    elseif diff_output_eik(i) == 1 && diff_output_eqk(i) == 0
-        diff_output_quadrant(i) = 2;
-    elseif diff_output_eik(i) == 0 && diff_output_eqk(i) == 1
-        diff_output_quadrant(i) = 3;
-    elseif diff_output_eik(i) == 1 && diff_output_eqk(i) == 1
-        diff_output_quadrant(i) = 4;
-    end
+    % if diff_output_eik(i+1) == 0 && diff_output_eqk(i+1) == 0
+    %     diff_output_quadrant(i+1) = 1;
+    % elseif diff_output_eik(i+1) == 1 && diff_output_eqk(i+1) == 0
+    %     diff_output_quadrant(i+1) = 2;
+    % elseif diff_output_eik(i+1) == 0 && diff_output_eqk(i+1) == 1
+    %     diff_output_quadrant(i+1) = 3;
+    % elseif diff_output_eik(i+1) == 1 && diff_output_eqk(i+1) == 1
+    %     diff_output_quadrant(i+1) = 4;
+    % end
+end
 
-    % Update previous values for next iteration
-    diff_output_eik_prev = diff_output_eik(i);
-    diff_output_eqk_prev = diff_output_eqk(i);
+% Remapping
+for i = 1:length(diff_output_eik)
+    if diff_output_eik(i) == 0 && diff_output_eqk(i) == 0
+        diff_output_eik(i) = 1;
+        diff_output_eqk(i) = 1;
+    elseif diff_output_eik(i) == 1 && diff_output_eqk(i) == 0
+        diff_output_eik(i) = -1;
+        diff_output_eqk(i) = 1;
+    elseif diff_output_eik(i) == 1 && diff_output_eqk(i) == 1
+        diff_output_eik(i) = -1;
+        diff_output_eqk(i) = -1;
+    elseif diff_output_eik(i) == 0 && diff_output_eqk(i) == 1
+        diff_output_eik(i) = 1;
+        diff_output_eqk(i) = -1;
+    end       
 end
 
 %% Upsampling eik
@@ -60,7 +76,7 @@ end
 len_diff_output_eik = length(diff_output_eik);
 
 % Initialize the output data for upsampling eik
-output_upsampling_eik = zeros(1, len_diff_output_eik + (len_diff_output_eik - 1) * 7);
+output_upsampling_eik = zeros(1, len_diff_output_eik + (len_diff_output_eik) * 7);
 
 % Copy the input data to the output data and insert zeros
 output_upsampling_eik(1:(7+1):end) = diff_output_eik;
@@ -70,7 +86,7 @@ output_upsampling_eik(1:(7+1):end) = diff_output_eik;
 len_diff_output_eqk = length(diff_output_eqk);
 
 % Initialize the output data for upsampling eqk
-output_upsampling_eqk = zeros(1, len_diff_output_eqk + (len_diff_output_eqk - 1) * 7);
+output_upsampling_eqk = zeros(1, len_diff_output_eqk + (len_diff_output_eqk) * 7);
 
 % Copy the input data to the output data and insert zeros
 output_upsampling_eqk(1:(7+1):end) = diff_output_eqk;
@@ -151,11 +167,11 @@ title('Diff Output eqk');
 xlabel('Sample Index');
 ylabel('Value');
 
-subplot(3, 1, 3);
-plot(diff_output_quadrant);
-title('Diff Output Quadrant');
-xlabel('Sample Index');
-ylabel('Value');
+% subplot(3, 1, 3);
+% plot(diff_output_quadrant);
+% title('Diff Output Quadrant');
+% xlabel('Sample Index');
+% ylabel('Value');
 
 % Create a figure
 figure;
