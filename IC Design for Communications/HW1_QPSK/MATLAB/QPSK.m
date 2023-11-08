@@ -76,12 +76,14 @@ output_upsampling_eqk = zeros(1, len_diff_output_eqk + (len_diff_output_eqk - 1)
 output_upsampling_eqk(1:(7+1):end) = diff_output_eqk;
 
 %% Pulse Shaping Filter
-intp_num = 4; % Resolution points between symbols
-symbol_interval = 8; % Span of the Nyquist filter
+intp_num = length(output_upsampling_eik); % Resolution points between symbols
+symbol_interval = 16 % Span of the Nyquist filter
 rolloff = 0.5; % Rolloff factor
 srrcc = srrcf(intp_num, symbol_interval, rolloff);
 
-disp(srrcc);
+% srrcc_data_i = srrcf(output_upsampling_eik, symbol_interval, rolloff);
+% srrcc_data_q = srrcf(output_upsampling_eqk, symbol_interval, rolloff);
+% disp(srrcc);
 
 srrcc_data_i = conv(output_upsampling_eik, srrcc);
 srrcc_data_q = conv(output_upsampling_eqk, srrcc);
@@ -186,9 +188,9 @@ xlabel('Sample Index');
 ylabel('Value');
 
 % Plot Local Oscillator Output
-% subplot(3, 1, 3);
-% plot(output);
-% title('Local Oscillator Output');
-% xlabel('Sample Index');
-% ylabel('Value');
+subplot(1, 1, 1);
+plot(output);
+title('Local Oscillator Output');
+xlabel('Sample Index');
+ylabel('Value');
 
