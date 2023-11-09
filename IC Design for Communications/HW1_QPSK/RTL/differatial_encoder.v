@@ -1,5 +1,5 @@
 module differential_encoder(
-    input clk_8megahz,
+    input clk_1megahz,
     input rst_n,
     input s2p_i,
     input s2p_q,
@@ -9,7 +9,7 @@ module differential_encoder(
 
 reg [1:0]diff_i,diff_q; //[1] is current, [0] is previous
 
-always @(posedge clk_8megahz or negedge rst_n) begin
+always @(posedge clk_1megahz or negedge rst_n) begin
     if (!rst_n) begin
         diff_i <= 2'b00;
         diff_q <= 2'b00;
