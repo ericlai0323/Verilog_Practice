@@ -10,10 +10,9 @@ module pulseshapingfilter(
 	parameter word_width = 12;
 	parameter order = 32;
 
-	// define delay unit , input width is 16  , filter order is 16
 	reg signed [word_width-1:0] delay_pipeline[order:0];
 	
-	// define coef
+	// Define coef
 	wire signed [word_width-1:0]  coef[order:0];
 	assign coef[0] = -17;
 	assign coef[1] = 62;

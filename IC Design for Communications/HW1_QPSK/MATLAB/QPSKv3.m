@@ -80,7 +80,7 @@ rolloff = 0.49; % Rolloff factor
 srrcc = srrcf(intp_num, symbol_interval, rolloff);
 
 cof = srrcc * 1000;
-disp(cof);
+% disp(cof);
 
 srrcc_data_i = conv(srrcc, output_upsampling_eik);
 srrcc_data_q = conv(srrcc, output_upsampling_eqk);
@@ -92,6 +92,9 @@ filtered_qk_data = srrcc_data_q(1,:);
 % Generate the local oscillator signals
 cos_signal = cos(2*pi*filtered_ik_data(:)/8);
 sin_signal = sin(2*pi*filtered_qk_data(:)/8);
+
+disp(2*pi*filtered_ik_data(:)/8);
+disp(2*pi*filtered_qk_data(:)/8);
 
 % Multiply the filtered signals by the local oscillator signals
 output_i = filtered_ik_data .* cos_signal;
@@ -198,6 +201,19 @@ ylabel('Value');
 subplot(3, 1, 3);
 plot(output);
 title('Local Oscillator Output');
+xlabel('Sample Index');
+ylabel('Value');
+
+figure;
+subplot(2,1,1);
+plot(cos_signal);
+title('Cos Signal');
+xlabel('Sample Index');
+ylabel('Value');
+
+subplot(2,1,2);
+plot(sin_signal);
+title('Sin Signal');
 xlabel('Sample Index');
 ylabel('Value');
 

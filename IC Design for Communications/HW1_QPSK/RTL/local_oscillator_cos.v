@@ -5,4 +5,7 @@ module local_oscillator_cos(
     output reg signed [13:0] lo_cos_data
 );
 
+// output = cos(2*pi*filtered_data/8)
+
 endmodule
+
