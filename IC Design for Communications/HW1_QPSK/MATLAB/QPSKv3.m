@@ -79,8 +79,25 @@ symbol_interval = 4; % Span of the Nyquist filter
 rolloff = 0.49; % Rolloff factor
 srrcc = srrcf(intp_num, symbol_interval, rolloff);
 
+% Extract cof variable 
 cof = srrcc * 1000;
-% disp(cof);
+
+% Convert to binary  
+cof_binary = dec2bin(cof, 12); 
+
+% Create CSV file
+fid = fopen('filter_cof.csv','w');
+
+% Write headers
+fprintf(fid, 'Coefficients,Binary\n'); 
+
+% Write data to file 
+for i = 1:length(cof)
+    fprintf(fid,'%f,%s\n', cof(i), cof_binary(i,:)); 
+end
+
+% Close file
+fclose(fid);
 
 srrcc_data_i = conv(srrcc, output_upsampling_eik);
 srrcc_data_q = conv(srrcc, output_upsampling_eqk);
@@ -93,8 +110,8 @@ filtered_qk_data = srrcc_data_q(1,:);
 cos_signal = cos(2*pi*filtered_ik_data(:)/8);
 sin_signal = sin(2*pi*filtered_qk_data(:)/8);
 
-disp(2*pi*filtered_ik_data(:)/8);
-disp(2*pi*filtered_qk_data(:)/8);
+% disp(2*pi*filtered_ik_data(:)/8);
+% disp(2*pi*filtered_qk_data(:)/8);
 
 % Multiply the filtered signals by the local oscillator signals
 output_i = filtered_ik_data .* cos_signal;
