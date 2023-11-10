@@ -14,23 +14,39 @@ module pulseshapingfilter(
 	
 	// Define coef
 	wire signed [word_width-1:0]  coef[order:0];
-	assign coef[0] = -17;
-	assign coef[1] = 62;
-	assign coef[2] = 456;
-	assign coef[3] = 1482;
-	assign coef[4] = 3367;
-	assign coef[5] = 6013;
-	assign coef[6] = 8880;
-	assign coef[7] = 11129;
-	assign coef[8] = 11983;
-	assign coef[9] = 11129;
-	assign coef[10] = 8880;
-	assign coef[11] = 6013;
-	assign coef[12] = 3367;
-	assign coef[13] = 1482;
-	assign coef[14] = 456;
-	assign coef[15] = 62;
-	assign coef[16] = -17;
+	assign coef[0] = 12'b111111110110;
+	assign coef[1] = 12'b111111111101;
+	assign coef[2] = 12'b000000001011;
+	assign coef[3] = 12'b000000010000;
+	assign coef[4] = 12'b000000000001;
+	assign coef[5] = 12'b111111101111;
+	assign coef[6] = 12'b111111110011;
+	assign coef[7] = 12'b000000010010;
+	assign coef[8] = 12'b000000101100;
+	assign coef[9] = 12'b000000001101;
+	assign coef[10] = 12'b111110110001;
+	assign coef[11] = 12'b111101100001;
+	assign coef[12] = 12'b111110010111;
+	assign coef[13] = 12'b000010100000;
+	assign coef[14] = 12'b001001000100;
+	assign coef[15] = 12'b001111001101;
+	assign coef[16] = 12'b010001101101;
+	assign coef[17] = 12'b001111001101;
+	assign coef[18] = 12'b001001000100;
+	assign coef[19] = 12'b000010100000;
+	assign coef[20] = 12'b111110010111;
+	assign coef[21] = 12'b111101100001;
+	assign coef[22] = 12'b111110110001;
+	assign coef[23] = 12'b000000001101;
+	assign coef[24] = 12'b000000101100;
+	assign coef[25] = 12'b000000010010;
+	assign coef[26] = 12'b111111110011;
+	assign coef[27] = 12'b111111101111;
+	assign coef[28] = 12'b000000000001;
+	assign coef[29] = 12'b000000010000;
+	assign coef[30] = 12'b000000001011;
+	assign coef[31] = 12'b111111111101;
+	assign coef[32] = 12'b111111110110;
 
 	// define multipler
 	reg signed [31:0]  product[16:0];
