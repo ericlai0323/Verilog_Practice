@@ -125,52 +125,52 @@ output = output_i + output_q;
 
 
 %% Plot Figure
-% % Create a figure
-% figure;
-% 
-% % Plot binary_data
-% subplot(3, 1, 1);
-% plot(binary_data);
-% title('Binary Data');
-% xlabel('Sample Index');
-% ylabel('Value');
-% 
-% % Plot s2p_ik
-% subplot(3, 1, 2);
-% plot(s2p_ik,'g');
-% title('s2p ik');
-% xlabel('Sample Index');
-% ylabel('Value');
-% 
-% % Plot s2p_qk
-% subplot(3, 1, 3);
-% plot(s2p_qk,'b');
-% title('s2p qk');
-% xlabel('Sample Index');
-% ylabel('Value');
+% Create a figure
+figure;
+
+% Plot binary_data
+subplot(3, 1, 1);
+plot(binary_data);
+title('Binary Data');
+xlabel('Sample Index');
+ylabel('Value');
+
+% Plot s2p_ik
+subplot(3, 1, 2);
+plot(s2p_ik,'g');
+title('s2p ik');
+xlabel('Sample Index');
+ylabel('Value');
+
+% Plot s2p_qk
+subplot(3, 1, 3);
+plot(s2p_qk,'b');
+title('s2p qk');
+xlabel('Sample Index');
+ylabel('Value');
 
 % Create a figure
-% figure;
-% 
-% % Plot diff_output_eik
-% subplot(3, 1, 1);
-% plot(diff_output_eik);
-% title('Diff Output eik');
+figure;
+
+% Plot diff_output_eik
+subplot(3, 1, 1);
+plot(diff_output_eik);
+title('Diff Output eik');
+xlabel('Sample Index');
+ylabel('Value');
+
+% Plot diff_output_eqk
+subplot(3, 1, 2);
+plot(diff_output_eqk);
+title('Diff Output eqk');
+xlabel('Sample Index');
+ylabel('Value');
+
+% subplot(3, 1, 3);
+% plot(diff_output_quadrant);
+% title('Diff Output Quadrant');
 % xlabel('Sample Index');
 % ylabel('Value');
-% 
-% % Plot diff_output_eqk
-% subplot(3, 1, 2);
-% plot(diff_output_eqk);
-% title('Diff Output eqk');
-% xlabel('Sample Index');
-% ylabel('Value');
-% 
-% % subplot(3, 1, 3);
-% % plot(diff_output_quadrant);
-% % title('Diff Output Quadrant');
-% % xlabel('Sample Index');
-% % ylabel('Value');
 
 % Create a figure
 figure;

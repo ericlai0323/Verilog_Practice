@@ -5,8 +5,8 @@ module clk_generator(
     output reg clk_1megahz   // 1MHz output clock
 );
 
-    reg [2:0] counter2; // 3-bit counter for 2MHz
-    reg [3:0] counter1; // 4-bit counter for 1MHz
+    reg [1:0] counter2; // 2-bit counter for 2MHz
+    reg [2:0] counter1; // 3-bit counter for 1MHz
 
     always @(posedge clk_8megahz or negedge rst_n) begin
         if (!rst_n) begin
@@ -20,10 +20,10 @@ module clk_generator(
             counter1 <= counter1 + 1'b1;
 
             // Generate the 2MHz clock by toggling every fourth rising edge
-            clk_2megahz <= (counter2 == 3'b0);
+            clk_2megahz <= (counter2 == 2'b0);
 
             // Generate the 1MHz clock by toggling every eighth rising edge
-            clk_1megahz <= (counter1 == 4'b0);
+            clk_1megahz <= (counter1 == 3'b0);
         end
     end
 
