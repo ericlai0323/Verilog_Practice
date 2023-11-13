@@ -95,13 +95,13 @@ pulseshapingfilter fir_q(
 );
 
 cos_wave_generator cos_wave_generator(
-    .clk_8megahz(clk_8megahz),
+    .clk_1megahz(clk_1megahz),
     .rst_n(rst_n),
     .cos_out(lo_cos_wave_data)
 );
 
 nsin_wave_generator nsin_wave_generator(
-    .clk_8megahz(clk_8megahz),
+    .clk_1megahz(clk_1megahz),
     .rst_n(rst_n),
     .nsin_out(lo_nsin_wave_data)
 );
@@ -142,7 +142,7 @@ initial begin
   clk_8megahz = 1'b0;
   // Reset
   rst_n = 1'b0;
-  #1000;
+  #20000;
   rst_n = 1'b1;
 
   // Open files
