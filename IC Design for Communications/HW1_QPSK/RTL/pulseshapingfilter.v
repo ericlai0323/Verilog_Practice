@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 
 module pulseshapingfilter(
-	input clk,
+	input clk_8megahz,
 	input rst_n,
 	input wire signed [1:0] usp_data,
 	output reg signed [13:0] filtered_data
@@ -58,7 +58,7 @@ module pulseshapingfilter(
 	reg signed [15:0] data_in_buf;
 
 	// data buffer
-	always @(posedge clk or negedge rst_n) begin
+	always @(posedge clk_8megahz or negedge rst_n) begin
 		if (!rst_n) begin
 			data_in_buf <= 0;
 		end
@@ -68,7 +68,7 @@ module pulseshapingfilter(
 	end
 
 	// delay units pipeline
-	always @(posedge clk or negedge rst_n) begin
+	always @(posedge clk_8megahz or negedge rst_n) begin
 		if (!rst_n) begin
 			delay_pipeline[0] <= 0 ;
 			delay_pipeline[1] <= 0 ;
@@ -110,7 +110,7 @@ module pulseshapingfilter(
 	end
 
 	// implement product with coef 
-	always @(posedge clk or negedge rst_n) begin
+	always @(posedge clk_8megahz or negedge rst_n) begin
 		if (!rst_n) begin
 			product[0] <= 0;
 			product[1] <= 0;
@@ -152,7 +152,7 @@ module pulseshapingfilter(
 	end
 
 	// accumulation
-	always @(posedge clk or negedge rst_n) begin
+	always @(posedge clk_8megahz or negedge rst_n) begin
 		if (!rst_n) begin
 			sum_buf <= 0;
 		end

@@ -22,7 +22,11 @@ wire signed[1:0] usp_i, usp_q;
 wire signed[13:0] filtered_i, filtered_q;
 
 // Local Oscillator
-wire signed[4:0] lo_cos_data, lo_nsin_data;
+wire signed[4:0] lo_cos_wave_data, lo_nsin_wave_data;
+
+// Convolution Data
+wire signed[15:0] convolve_data_i, convolve_data_q;
+
 
 // Module
 clk_generator clk_generator(
@@ -75,6 +79,42 @@ pulseshapingfilter fir_q(
     .rst_n(rst_n),
     .usp_data(usp_q),
     .filtered_data(filtered_q)
+);
+
+cos_wave_generator cos_wave_generator(
+    .clk_8megahz(clk_8megahz),
+    .rst_n(rst_n),
+    .cos_out(lo_cos_wave_data)
+);
+
+nsin_wave_generator nsin_wave_generator(
+    .clk_8megahz(clk_8megahz),
+    .rst_n(rst_n),
+    .nsin_out(lo_nsin_wave_data)
+);
+
+convolve convolve_i(
+    .clk_8megahz(clk_8megahz),
+    .rst_n(rst_n),
+    .filtered_data(filtered_i),
+    .lo_wave_data(lo_cos_wave_data),
+    .convolve_data(convolve_data_i)
+);
+
+convolve convolve_q(
+    .clk_8megahz(clk_8megahz),
+    .rst_n(rst_n),
+    .filtered_data(filtered_q),
+    .lo_wave_data(lo_nsin_wave_data),
+    .convolve_data(convolve_data_q)
+);
+
+adder adder(
+    .clk_8megahz(clk_8megahz),
+    .rst_n(rst_n),
+    .data_i(convolve_data_i),
+    .data_q(convolve_data_q),
+    .sum_data(sum)
 );
 
 
