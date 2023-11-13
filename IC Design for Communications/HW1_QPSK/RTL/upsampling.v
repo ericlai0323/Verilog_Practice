@@ -10,6 +10,7 @@ reg [2:0]counter; // For 8
 always @(posedge clk_8megahz or negedge rst_n)begin
     if(!rst_n) begin
         usp_data <= 2'b00;
+        counter <= 3'b0;
     end else begin
         if(counter == 3'd0)
             usp_data <= diff_remapped_data;

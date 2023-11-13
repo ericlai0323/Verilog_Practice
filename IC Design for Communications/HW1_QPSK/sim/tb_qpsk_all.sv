@@ -1,9 +1,12 @@
-module qpsk_top(
-    input binary_data,
-    input rst_n,
-    input clk_8megahz,
-    output signed[15:0] sum
-);
+`timescale 1ns / 1ps
+`define CYCLE 125
+
+module tb_qpsk_all;
+
+integer tmp;
+// Inputs  
+reg clk_8megahz;
+reg rst_n; 
 // Clock
 wire clk_2megahz;
 wire clk_1megahz;
@@ -27,8 +30,16 @@ wire signed[4:0] lo_cos_wave_data, lo_nsin_wave_data;
 // Convolution Data
 wire signed[15:0] convolve_data_i, convolve_data_q;
 
+// Sum Output
+wire signed[15:0] sum;
 
-// Module
+// File handles 
+integer infile;
+integer outfile;
+
+// Internal signal
+reg binary_data;
+
 clk_generator clk_generator(
     .clk_8megahz(clk_8megahz),
     .rst_n(rst_n),
@@ -36,13 +47,14 @@ clk_generator clk_generator(
     .clk_1megahz(clk_1megahz)
 );
 
-s2p s2p(
-    .clk_2megahz(clk_2megahz),
-    .clk_1megahz(clk_1megahz),
-    .rst_n(rst_n),
-    .binary_data(binary_data),
-    .s2p_i(s2p_i),
-    .s2p_q(s2p_q));
+s2p s2p (
+  .binary_data(binary_data), 
+  .clk_2megahz(clk_2megahz),
+  .clk_1megahz(clk_1megahz),
+  .rst_n(rst_n),
+  .s2p_i(s2p_i),
+  .s2p_q(s2p_q)
+);
 
 differential_encoder differential_encoder(
     .clk_1megahz(clk_1megahz),
@@ -66,6 +78,7 @@ upsampling upsampling_q(
     .diff_remapped_data(diff_remapped_q),
     .usp_data(usp_q)
 );
+
 
 pulseshapingfilter fir_i(
     .clk_8megahz(clk_8megahz),
@@ -116,6 +129,52 @@ adder adder(
     .data_q(convolve_data_q),
     .sum_data(sum)
 );
+// 8MHz clock
+always #(`CYCLE/2) clk_8megahz = ~clk_8megahz;   
 
+initial begin
+   $dumpvars();
+   $dumpfile("AllData.vcd");
+end
+
+
+initial begin
+  clk_8megahz = 1'b0;
+  // Reset
+  rst_n = 1'b0;
+  #1000;
+  rst_n = 1'b1;
+
+  // Open files
+  infile = $fopen("input_data.csv", "r"); 
+  outfile = $fopen("all_output_data.csv", "w");
+
+  // Title
+  $fwrite(outfile, "s2p_i, s2p_q, diff_remapped_i, diff_remapped_q, usp_i, usp_q, filtered_i, filtered_q, lo_cos_wave_data, lo_nsin_wave_data, convolve_data_i, convolve_data_q, sum");
+
+  // Read input data from file
+  
+  while (!$feof(infile)) begin
+    tmp = $fscanf(infile, "%d", binary_data);
+    $display("Read Data: %d", binary_data);
+    @(posedge clk_2megahz);
+  end
+
+  // Close files 
+  $fclose(infile);
+
+  // Finish simulation
+  #10;
+  $finish;
+
+end
+
+// Write output to file
+always @(posedge clk_8megahz or negedge rst_n) begin
+  if(!rst_n)
+  $fwrite(outfile, "RST");
+  else
+  $fwrite(outfile, "%d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d\n", s2p_i, s2p_q, diff_remapped_i, diff_remapped_q, usp_i, usp_q, filtered_i, filtered_q, lo_cos_wave_data, lo_nsin_wave_data, convolve_data_i, convolve_data_q, sum); 
+end
 
 endmodule

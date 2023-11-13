@@ -1,5 +1,5 @@
 `timescale 1ns / 1ps
-
+`define CYCLE 125
 module qpsk_tb;
 
 integer tmp;
@@ -26,8 +26,9 @@ qpsk_top dut (
   .sum(sum)
 );
 
+
 // 8MHz clock
-always #125 clk_8megahz = ~clk_8megahz;   
+always begin  #(`CYCLE/2) clk_8megahz = ~clk_8megahz;  end
 
 initial begin
    $dumpvars();
@@ -36,10 +37,10 @@ end
 
 
 initial begin
-
+  clk_8megahz = 1'b0;
   // Reset
   rst_n = 1'b0;
-  #1000;
+  #100;
   rst_n = 1'b1;
 
   // Open files
@@ -50,25 +51,25 @@ initial begin
   
   while (!$feof(infile)) begin
     tmp = $fscanf(infile, "%d", binary_data);
-    // $fgets(line, infile);
-    // $sscanf(line,"%d", binary_data);
     $display("Read Data: %d", binary_data);
-    // $display($feof(infile));
-    @(posedge clk_8megahz);
+     @(posedge clk_8megahz);
+    //#250;
   end
 
   // Close files 
   $fclose(infile);
-  $fclose(outfile);
+  // $fclose(outfile);
 
   // Finish simulation
-  #500000;
+  #1000;
   $finish;
 
 end
 
 // Write output to file
-always @(posedge clk_8megahz) begin
+always @(posedge clk_8megahz or negedge rst_n) begin
+  $display("CLK 8MHz: %d", clk_8megahz);
+  $display("Output Sum: %d", sum);
   $fwrite(outfile, "%d\n", sum); 
 end
 
