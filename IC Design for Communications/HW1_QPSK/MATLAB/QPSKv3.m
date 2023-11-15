@@ -123,6 +123,22 @@ output_q = output_q(1,:);
 % Combine the I and Q components into a complex signal
 output = output_i + output_q;
 
+% Extract cof variable 
+cof_output = output * 1000;
+
+% Convert to binary  
+cof_binary = dec2bin(cof_output, 12); 
+
+% Create CSV file
+fid = fopen('output_cof.csv','w');
+
+% Write headers
+fprintf(fid, 'Coefficients,Binary\n'); 
+
+% Write data to file 
+for i = 1:length(cof_output)
+    fprintf(fid,'%f,%s\n', cof_output(i), cof_binary(i,:)); 
+end
 
 %% Plot Figure
 % Create a figure

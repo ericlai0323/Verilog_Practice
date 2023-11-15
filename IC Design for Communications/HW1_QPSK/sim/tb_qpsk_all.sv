@@ -27,8 +27,8 @@ wire signed[13:0] filtered_i, filtered_q;
 // Local Oscillator
 wire signed[4:0] lo_cos_wave_data, lo_nsin_wave_data;
 
-// Convolution Data
-wire signed[15:0] convolve_data_i, convolve_data_q;
+// Multiplier Data
+wire signed[15:0] multiplier_data_i, multiplier_data_q;
 
 // Sum Output
 wire signed[15:0] sum;
@@ -106,27 +106,27 @@ nsin_wave_generator nsin_wave_generator(
     .nsin_out(lo_nsin_wave_data)
 );
 
-convolve convolve_i(
+multiplier multiplier_i(
     .clk_8megahz(clk_8megahz),
     .rst_n(rst_n),
     .filtered_data(filtered_i),
     .lo_wave_data(lo_cos_wave_data),
-    .convolve_data(convolve_data_i)
+    .multiplier_data(multiplier_data_i)
 );
 
-convolve convolve_q(
+multiplier multiplier_q(
     .clk_8megahz(clk_8megahz),
     .rst_n(rst_n),
     .filtered_data(filtered_q),
     .lo_wave_data(lo_nsin_wave_data),
-    .convolve_data(convolve_data_q)
+    .multiplier_data(multiplier_data_q)
 );
 
 adder adder(
     .clk_8megahz(clk_8megahz),
     .rst_n(rst_n),
-    .data_i(convolve_data_i),
-    .data_q(convolve_data_q),
+    .data_i(multiplier_data_i),
+    .data_q(multiplier_data_q),
     .sum_data(sum)
 );
 // 8MHz clock
@@ -150,7 +150,7 @@ initial begin
   outfile = $fopen("all_output_data.csv", "w");
 
   // Title
-  $fwrite(outfile, "s2p_i, s2p_q, diff_remapped_i, diff_remapped_q, usp_i, usp_q, filtered_i, filtered_q, lo_cos_wave_data, lo_nsin_wave_data, convolve_data_i, convolve_data_q, sum");
+  $fwrite(outfile, "s2p_i, s2p_q, diff_remapped_i, diff_remapped_q, usp_i, usp_q, filtered_i, filtered_q, lo_cos_wave_data, lo_nsin_wave_data, multiplier_data_i, multiplier_data_q, sum");
 
   // Read input data from file
   
@@ -174,7 +174,7 @@ always @(posedge clk_8megahz or negedge rst_n) begin
   if(!rst_n)
   $fwrite(outfile, "RST");
   else
-  $fwrite(outfile, "%d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d\n", s2p_i, s2p_q, diff_remapped_i, diff_remapped_q, usp_i, usp_q, filtered_i, filtered_q, lo_cos_wave_data, lo_nsin_wave_data, convolve_data_i, convolve_data_q, sum); 
+  $fwrite(outfile, "%d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d\n", s2p_i, s2p_q, diff_remapped_i, diff_remapped_q, usp_i, usp_q, filtered_i, filtered_q, lo_cos_wave_data, lo_nsin_wave_data, multiplier_data_i, multiplier_data_q, sum); 
 end
 
 endmodule
