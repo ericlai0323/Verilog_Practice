@@ -9,6 +9,7 @@ R = A;
 % disp([R(1,1),R(4,1)]);
 
 [R(1,1),R(4,1),angle] = vectoring_mode_cordic(R(1,1),R(4,1),iteration);
+disp(angle);
 [R(1,2),R(4,2)] = rotating_mode_cordic(R(1,2),R(4,2),iteration,angle);
 [R(1,3),R(4,3)] = rotating_mode_cordic(R(1,3),R(4,3),iteration,angle);
 [R(1,4),R(4,4)] = rotating_mode_cordic(R(1,4),R(4,4),iteration,angle);

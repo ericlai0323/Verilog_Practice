@@ -1,4 +1,4 @@
-module atanh_lookup(index, value);
+module atan_table(index, value);
     localparam FLOAT_SIZE = 24;
     localparam INT_SIZE = 8;
 

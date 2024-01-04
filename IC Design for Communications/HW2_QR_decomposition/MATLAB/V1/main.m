@@ -17,13 +17,13 @@ R_matrix = zeros(4, 4, 1000);
 Cordic_R_matrix = zeros(4, 4, 1000);
 Real_R_matrix = zeros(4, 4, 1000);
 % 循環處理每個4*4矩陣
-for k = 1:1000
+for k = 1:1
     
     [Q, R] = cordic_qr_decomposition(data(:, :, k), 8);
     Q_matrix(:, :, k) = Q;
     R_matrix(:, :, k) = R;
     
-    disp(R);
+    % disp(R);
     
     [Cordic_Q , Cordic_R] = cordicqr(data(:, :, k),8);
     Cordic_R = fix(Cordic_R);

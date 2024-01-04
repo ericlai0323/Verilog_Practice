@@ -6,6 +6,7 @@ for ii = 1: iteration
     t = 2^-(ii-1);
     factor_temp = (1/sqrt(1+(t^2)));
     factor = factor * factor_temp;
+    disp(factor);
 end
 
 for ii = 1: iteration
