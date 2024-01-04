@@ -1,4 +1,4 @@
-function [Q, R] = cordic_qr_decomposition(A, vectoring_iterations, rotating_iterations)
+function [Q, R] = cordic_qr_decomposition_X(A, vectoring_iterations, rotating_iterations)
     [m, n] = size(A);
     
     if m ~= n

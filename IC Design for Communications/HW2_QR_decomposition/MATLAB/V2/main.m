@@ -16,19 +16,21 @@ A_matrix = zeros(4, 4, 1000);
 % A = Q * R;
 
 % 循環處理每個4*4矩陣
-for k = 1:10
+for k = 1:1
 
-    [Q, R] = cordic_qr_decomposition(data(:, :, k), 7,7);
+    [Q, R] = cordic_qr_decomposition(data(:, :, k), 8);
     Q_matrix(:, :, k) = Q;
     R_matrix(:, :, k) = R;
 
     A_matrix(:, :, k) = Q*R;
+    
+    [Real_Q, Real_R] = qr(data(:, :, k));
 
-    if(A_matrix(:, :, k) == data(:, :, k) )
-        disp("A = QR");
-    else
-        disp("A != QR Error!!");
-    end
+    % if(A_matrix(:, :, k) == data(:, :, k) )
+    %     disp("A = QR");
+    % else
+    %     disp("A != QR Error!!");
+    % end
 
 end
 
