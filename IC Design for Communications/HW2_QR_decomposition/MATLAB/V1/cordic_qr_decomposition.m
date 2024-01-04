@@ -23,19 +23,16 @@ R = A;
 [R(1,3),R(2,3)] = rotating_mode_cordic(R(1,3),R(2,3),iteration,angle);
 [R(1,4),R(2,4)] = rotating_mode_cordic(R(1,4),R(2,4),iteration,angle);
 
-[R(1,2),R(4,2),angle] = vectoring_mode_cordic(R(1,2),R(4,2),iteration);
-[R(1,3),R(4,3)] = rotating_mode_cordic(R(1,3),R(4,3),iteration,angle);
-[R(1,4),R(4,4)] = rotating_mode_cordic(R(1,4),R(4,4),iteration,angle);
+[R(2,2),R(4,2),angle] = vectoring_mode_cordic(R(2,2),R(4,2),iteration);
+[R(2,3),R(4,3)] = rotating_mode_cordic(R(2,3),R(4,3),iteration,angle);
+[R(2,4),R(4,4)] = rotating_mode_cordic(R(2,4),R(4,4),iteration,angle);
 
-[R(1,2),R(3,2),angle] = vectoring_mode_cordic(R(1,2),R(3,2),iteration);
-[R(1,3),R(3,3)] = rotating_mode_cordic(R(1,3),R(3,3),iteration,angle);
-[R(1,4),R(3,4)] = rotating_mode_cordic(R(1,4),R(3,4),iteration,angle);
+[R(2,2),R(3,2),angle] = vectoring_mode_cordic(R(2,2),R(3,2),iteration);
+[R(2,3),R(3,3)] = rotating_mode_cordic(R(2,3),R(3,3),iteration,angle);
+[R(2,4),R(3,4)] = rotating_mode_cordic(R(2,4),R(3,4),iteration,angle);
 
-[R(1,3),R(4,3),angle] = vectoring_mode_cordic(R(1,3),R(4,3),iteration);
-[R(1,4),R(4,4)] = rotating_mode_cordic(R(1,4),R(4,4),iteration,angle);
+[R(3,3),R(4,3),angle] = vectoring_mode_cordic(R(3,3),R(4,3),iteration);
+[R(3,4),R(4,4)] = rotating_mode_cordic(R(3,4),R(4,4),iteration,angle);
 
 
 R = fix(R);
-
-% for i = 1:4
-%     for j = 1:4
