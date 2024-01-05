@@ -1,32 +1,22 @@
-module atan_table(index, value);
-    localparam FLOAT_SIZE = 24;
-    localparam INT_SIZE = 8;
+module atan_table(
+    input [3:0] index,
+    output reg signed [11:0] atan_value
+);
 
-    input wire signed [4:0] index;
-    output reg signed [INT_SIZE-1:-FLOAT_SIZE] value;
+always @* begin
+    case (index)
+        4'b0000: atan_value = 12'b0000_0000_0000; // atan(1/2^0) = 0
+        4'b0001: atan_value = 12'b0010_1010_1101; // atan(1/2^1) = 45 degrees
+        4'b0010: atan_value = 12'b0100_1101_0010; // atan(1/2^2) = 26.565 degrees
+        4'b0011: atan_value = 12'b0110_0010_1100; // atan(1/2^3) = 14.036 degrees
+        4'b0100: atan_value = 12'b0111_0100_1111; // atan(1/2^4) = 7.125 degrees
+        4'b0101: atan_value = 12'b1000_0000_0000; // atan(1/2^5) = 3.576 degrees
+        4'b0110: atan_value = 12'b1001_0011_0010; // atan(1/2^6) = 1.789 degrees
+        4'b0111: atan_value = 12'b1010_0001_1001; // atan(1/2^7) = 0.895 degrees
+        4'b1000: atan_value = 12'b1010_1111_1111; // atan(1/2^8) = 0.447 degrees
+        // Add more values as needed
+        default: atan_value = 12'b0000_0000_0000; // Default value for safety
+    endcase
+end
 
-    always @(index)
-    begin
-        case (index)
-            -3: value = 32'h02_12523d;  //  atanh(1-2^(-5))
-            -2: value = 32'h01_b78ce5;  //  atanh(1-2^(-4))
-            -1: value = 32'h01_5aa164;  //  atanh(1-2^(-3))
-            0:  value = 32'h00_f91395;  //  atanh(1-2^(-2))
-            1:  value = 32'h00_8c9f54;  //  atanh(2^(-1))
-            2:  value = 32'h00_4162bc;  //  atanh(2^(-2))
-            3:  value = 32'h00_202b12;  //  atanh(2^(-3))
-            4:  value = 32'h00_100559;  //  atanh(2^(-4))
-            5:  value = 32'h00_0800ab;  //  atanh(2^(-5))
-            6:  value = 32'h00_040015;  //  atanh(2^(-6))
-            7:  value = 32'h00_020003;  //  atanh(2^(-7))
-            8:  value = 32'h00_010000;  //  atanh(2^(-8))
-            9:  value = 32'h00_008000;  //  atanh(2^(-9))
-            10: value = 32'h00_004000;  //  atanh(2^(-10))
-            11: value = 32'h00_002000;  //  atanh(2^(-11))
-            12: value = 32'h00_001000;  //  atanh(2^(-12))
-            13: value = 32'h00_000800;  //  atanh(2^(-13))
-            default: 
-                value = 32'h00_000000;
-        endcase
-    end
 endmodule
